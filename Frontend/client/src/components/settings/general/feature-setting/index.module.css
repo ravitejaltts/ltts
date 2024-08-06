@@ -1,0 +1,45 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.header{
+    width: 100%;
+    position: relative;
+}
+.back{
+    position: absolute;
+    display: flex;
+    left: 46px;
+}
+
+  .back svg path {
+    fill: var(--ui-elements-icon-fill);
+  }
+
+.back {
+    display: flex;
+    align-items: center;
+  }
+  .back svg path {
+    fill: var(--ui-elements-icon-fill);
+  }
+.mainTitle{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color:var(--mode-text);
+    margin-bottom: 15px;
+}
+.infoContainer {
+    background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  width: 85%;
+}

@@ -1,0 +1,73 @@
+.card {
+  background-color: var(--bgColor3);
+  padding: 25px 30px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  font-size: 40px !important;
+}
+.icon2 {
+  font-size: 30px !important;
+}
+.middleRow {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.forecast {
+  color: var(--bgColor2);
+}
+
+.belowLine {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.currentAndOutdoor {
+  color: var(--bgColor2);
+  flex: 0.5;
+  font-size: 22px;
+}
+
+.current {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.temperature {
+  color: var(--textColor1);
+  flex: 0.4;
+  font-size: 35px;
+  text-align: end;
+  font-weight: 800;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  flex: 1;
+}
+
+.boxData {
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+.box:not(:last-child) .boxData {
+  border-right: 1px solid var(--bgColor2);
+}

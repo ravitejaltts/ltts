@@ -1,0 +1,10 @@
+.icon {
+  height: 40px;
+  width: 40px;
+}
+.icon rect {
+  fill: var(--bgInverted);
+}
+.icon path {
+  fill: var(--bgColor1);
+}

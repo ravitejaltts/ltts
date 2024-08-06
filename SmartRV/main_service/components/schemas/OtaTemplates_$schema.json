@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "description": "ota template file for the given device type, series model, floor plan, and version number",
+    "properties": {
+        "version": {
+            "type": "string"
+        },
+        "deviceType": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "seriesModel": {
+            "type": "string"
+        },
+        "floorPlan": {
+            "type": "string"
+        },
+        "messageVersion": {
+            "type": "string"
+        },
+        "hardwareVersion": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "deepObjectSeparator": {
+            "type": "string"
+        },
+        "alert_items": {
+            "type": "object"
+        },
+        "properties": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "category": {
+                        "type": "string"
+                    },
+                    "componentTypeCode": {
+                        "type": "string"
+                    },
+                    "routings": {
+                        "type": "array"
+                    }
+                }
+            }
+        }
+    }
+}

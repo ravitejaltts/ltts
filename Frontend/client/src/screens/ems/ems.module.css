@@ -1,0 +1,476 @@
+.ems {
+  background-color: var(--fills-background);
+  height: 100vh;
+  padding: 20px 40px;
+  color: var(--textColor1);
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.backNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.backText {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.energyText {
+  font-size: 24px;
+}
+
+.backNav svg path {
+  fill: var(--textColor1);
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.arrowTextCard {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--mode-bg-1);
+  padding: 10px 20px;
+  gap: 20px;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.topText {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+  color: var(--text-deemphasized);
+
+  text-transform: uppercase;
+}
+
+.bottomText {
+  color: var(--text-deemphasized);
+  margin: 8px 0 0 0;
+  font-size: 19px;
+}
+
+.bottomText span {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--textColor1);
+}
+
+.arrowTextCard svg path {
+  fill: var(--textColor1);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  box-sizing: border-box;
+  /* height: 375px; */
+  height: calc(100% - 100px);
+}
+
+.bottomRow {
+  display: flex;
+  gap: 40px;
+  margin: 12px;
+}
+
+.column {
+  width: 33%;
+}
+
+.arrowDiv {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardTopText {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cardBottomText {
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  font-size: 18px;
+}
+
+.cardTopRow svg path {
+  fill: var(--textColor1);
+}
+
+.middleDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--mode-bg-1);
+  box-sizing: border-box;
+  /* height: 375px; */
+  border-radius: 8px 8px 0px 0px;
+}
+
+.middleDiv svg path:first-child {
+  fill: #f2f2f7 !important;
+}
+
+.middleDiv svg path:nth-child(2) {
+  fill: #c7c7cc;
+}
+
+.timeContainer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--fills-surface-2);
+  border-radius: 0 0 8px 8px;
+}
+
+.timeNum {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.timeUnit {
+  font-size: 24px;
+  color: var(--text-deemphasized);
+  margin: 0 4px;
+}
+
+.remainingText {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.rightDiv {
+  background-color: var(--fills-surface-5);
+}
+
+/* rightCard */
+
+.rightCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  /* box-sizing: border-box; */
+}
+
+.rightCard {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.rightTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rightCard p {
+  margin: 0;
+}
+
+.greenBox1 {
+  height: 40px;
+  width: 25%;
+  background-color: #55b966;
+  position: absolute;
+  top: 25px;
+  left: 25%;
+  z-index: 0;
+}
+
+.greenBox2 {
+  height: 40px;
+  width: 25%;
+  background-color: #55b966;
+  position: absolute;
+  top: 25px;
+  right: 25%;
+  z-index: 0;
+}
+
+.iconBox {
+  width: 20px;
+  height: 20px;
+  margin: 1px 12px 0 0;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--fills-surface-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* battery container */
+
+.batteryContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.innerBattery {
+  position: absolute;
+  background-color: var(--colors-green);
+  width: 102px;
+  bottom: 11px;
+  left: 7px;
+  overflow: hidden;
+  border-radius: 11.7px;
+}
+
+.innerBatteryText {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--textColor1);
+  z-index: 5;
+  font-weight: 600;
+}
+
+.innerBatteryColorFillContainer {
+  position: absolute;
+  bottom: 11px;
+  left: 7px;
+  width: 100px;
+  height: 136px;
+  border-radius: 11.7px;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.innerBatteryColorFill {
+  background-color: var(--colors-green);
+}
+
+.ringContainer {
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ring {
+  border: 10px solid var(--circle);
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.ringOverlay {
+  border: 10px solid transparent;
+  border-top-color: var(--fills-surface-2);
+  border-left-color: var(--fills-surface-2);
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* transform: rotate(50deg); */
+}
+
+.multiFuncSwitchCont {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 75px;
+  width: 122px;
+}
+
+.multiFuncSwitch {
+  background-color: #ddf1e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--colors-green);
+  border-radius: 4px;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.multiFuncSwitch svg path {
+  fill: var(--colors-green);
+}
+
+.multiFuncSwitchOff {
+  background-color: #fcdfd6;
+  color: var(--colors-salmon);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.multiFuncSwitchOff svg path {
+  fill: var(--colors-salmon);
+}
+
+.arrowIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boltIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.batteryDetails {
+  rotate: 180deg;
+  position: absolute;
+  right: 0;
+}
+
+.batteryMainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.batteryInfoContainer {
+  height: 136px;
+  width: 170px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.batteryInfoDiv {
+  position: absolute;
+  transform: translateY(50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.batteryInfoDiv p {
+  margin: 0;
+}
+
+.batteryInfoTitle {
+  color: var(--text-deemphasized);
+  font-size: 18px;
+}
+
+.batteryInfoDivValue {
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.leftArrow {
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-right: 11px solid var(--colors-green);
+}
+
+.disableColor {
+  background-color: var(--fills-surface-2);
+}
+
+.disableCard {
+  background-color: var(--fills-surface-2);
+}
+
+.disableCard .iconBox {
+  background-color: var(--fills-surface-2);
+}
+
+@media screen and (max-width: 1024px) {
+  .bottomCard {
+    position: relative;
+    background-color: var(--fills-surface-5);
+    padding: 6px 15px;
+  }
+
+  .bottomCardInactive {
+    position: relative;
+    background-color: var(--extra-fade);
+    padding: 6px 15px;
+  }
+
+  .multiFuncSwitchCont {
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    height: 40px;
+    width: 90px;
+  }
+
+  .middleDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 0 10px;
+  }
+
+  .batteryMainContainer {
+    scale: 0.9;
+  }
+}

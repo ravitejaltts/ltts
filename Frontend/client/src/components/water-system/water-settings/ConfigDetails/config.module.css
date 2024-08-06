@@ -1,0 +1,547 @@
+.header {
+  display: flex;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  color: var(--text-main);
+}
+.back svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.back h2 {
+  margin: 0;
+}
+
+.heading {
+  text-align: center;
+  color: var(--text-main);
+  font-size: 30px;
+  width: 100%;
+  margin: 0;
+  font-family: Roboto;
+  font-size: 24px;
+}
+
+.infoContainer {
+  background-color: var(--mode-bg-1);
+  border-radius: 15px;
+}
+
+/* tempp */
+
+.mainContainer {
+  background-color: var(--fills-background);
+  height: 100vh;
+  /* padding: 20px 20px 40px; */
+  color: var(--textColor1);
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  display: flex;
+}
+
+.backContainer {
+  background-color: var(--fills-surface-5);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.backNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.backText {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.energyText {
+  font-size: 24px;
+  margin: 0 0 0 250px;
+}
+.backNav svg path {
+  fill: var(--textColor1);
+}
+
+/* copy from lighting start */
+
+.leftDiv {
+  height: 100%;
+  background-color: var(--app-screen-left-bg);
+  width: 35%;
+  max-width: 357px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.mainRight {
+  flex: 1;
+  width: 65%;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.rightDiv {
+  position: relative;
+  background-color: var(--mode-bg-1);
+  border-radius: 16px;
+  width: 100%;
+  display: inline-block;
+}
+
+.leftDivTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settingsContainer {
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  box-sizing: border-box;
+  background-color: var(--app-setting-background);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settingsContainer svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.lightingHeadingText {
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--mode-text);
+  margin-top: 24px;
+}
+
+.outdoorTemp {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: var(--mode-text);
+  margin: 8px 0 0;
+}
+
+.leftBottomContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.leftBottomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--ui-elements-border);
+  border-radius: 8px;
+}
+
+.fText {
+  font-size: 96px;
+  font-weight: bold;
+  margin: 15px 0 0 0;
+  display: flex;
+}
+
+.tempText {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  color: var(--text-main);
+  gap: 4px;
+}
+
+.fSmallText {
+  font-size: 18px;
+  color: var(--text-deemphasized);
+  align-self: center;
+}
+
+.currentText {
+  margin: 0 0 20px 0;
+  color: var(--text-deemphasized);
+}
+
+/* right div styling */
+
+.rowLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.centerTextDiv {
+  flex: 1;
+  border-right: 1px solid var(--ui-elements-divider-2);
+}
+
+.scheduleTextDiv {
+  flex: 1;
+}
+
+.lightMasterText {
+  font-size: 24px;
+  text-align: left;
+  color: var(--mode-text);
+  margin: 0;
+}
+
+.lightsOnText {
+  font-family: Roboto;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: var(--text-deemphasized);
+  margin: 0;
+}
+
+.rightBottomDiv {
+  padding: 15px;
+  background-color: var(--fills-surface-2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 0 0 16px 16px;
+}
+
+/* copy end */
+
+.btnContainer {
+  display: flex;
+
+  border: solid 1px var(--ui-elements-divider-3);
+  border-radius: 100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fanContainer {
+  max-width: 333px;
+}
+
+.leftBtn,
+.heatBtn {
+  border-right: 1px solid var(--ui-elements-divider-3);
+}
+
+.leftBtn,
+.rightBtn,
+.heatBtn {
+  padding: 10px 30px;
+  font-size: 19px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+  background-color: var(--textInverted);
+}
+
+.pillToggleButtonActive {
+  background-color: var(--textColor1);
+  color: var(--mode-bg-1);
+}
+.pillToggleButtonActive svg path {
+  fill: var(--mode-bg-1);
+}
+
+.thermoContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mode-bg-1);
+  padding: 40px 0;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.minusContainer,
+.plusContainer {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2.4px 9.7px 0 rgba(0, 0, 0, 0.16);
+}
+
+.heatContainer,
+.coolContainer {
+  height: 50px;
+  background-color: var(--textInverted);
+  width: 100px;
+  border-radius: 8px;
+  margin: 0 10px;
+  padding: 15px;
+  font-size: 44px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  /* transition: all 2s ease-in-out; */
+}
+
+.orangeText {
+  color: #f15f31;
+}
+
+.orangeBorder {
+  border: 1px solid #f15f31;
+}
+.blueText {
+  color: #0ca9da;
+}
+
+.blueBorder {
+  border: 1px solid #0ca9da;
+}
+
+.transBorder {
+  border: 1px transparent;
+}
+
+.offText {
+  color: #8e8e93;
+  opacity: 90%;
+}
+
+/* scheduleContainer */
+.scheduleContainer {
+  width: 100%;
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+}
+
+.sleepBox {
+  padding: 0px 20px;
+}
+.currentSchedule {
+  border: solid 1px #e5e5ea;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  align-items: center;
+}
+.currentScheduleText {
+  display: flex;
+  align-items: center;
+}
+.currentSchedule .scheduleTitle {
+  color: var(--mode-text);
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 10px;
+}
+.currentSchedule .scheduleSubText {
+  color: var(--text-deemphasized);
+  font-size: 18px;
+  margin: 0;
+}
+.currentScheduleClear {
+  display: flex;
+  align-items: center;
+}
+.currentScheduleClearText {
+  color: var(--mode-text);
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 5px;
+}
+.currentScheduleClear svg {
+  height: 24px;
+  width: 24px;
+}
+.currentSchedule svg path {
+  fill: var(--mode-text);
+}
+
+.roofHatch {
+  position: relative;
+  margin-top: 10px;
+  background-color: var(--mode-bg-1);
+  border-radius: 16px;
+  width: 100%;
+}
+
+.roofHatchContent {
+  background-color: var(--fills-surface-2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 16px 16px;
+}
+
+/* .fanStatus, .fanSpeed {
+  padding: 16px 60px;
+  border-radius: 40px;
+  background-color: var(--textColor1);
+  color: var(--mode-bg-1);
+} */
+
+.hatchOption {
+  background-color: var(--mode-bg-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 19px;
+}
+
+.selectContainer {
+  display: flex;
+  border: solid 1px var(--ui-elements-divider-3);
+  border-radius: 100px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.selectContainerFan {
+  display: flex;
+  border: solid 1px var(--ui-elements-divider-3);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.rightDivider {
+  border-right: 1px solid var(--ui-elements-divider-3);
+}
+
+.selectOptions {
+  padding: 10px 30px;
+  font-size: 19px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  border-right: 1px solid var(--ui-elements-divider-3);
+}
+
+.select {
+  background-color: var(--fills-surface-2);
+  color: var(--mode-text);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  width: 130px;
+  font-size: 19px;
+}
+.arrowIcon path {
+  fill: var(--mode-text);
+}
+.disableIcon2 path {
+  fill: var(--disable-text-2);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.disable {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--disable-elements);
+  border-radius: 16px;
+}
+.onTop {
+  position: relative;
+}
+
+.disableText1 {
+  color: var(--disable-text-1);
+}
+
+.disableText2 {
+  color: var(--disable-text-2);
+}
+
+.disableIcon path {
+  fill: var(--disable-text-1);
+}
+
+.bottomBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.restoreBtn {
+  width: 429px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 26px 40px;
+  border-radius: 40px;
+  background-color: var(--mode-bg-1);
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: 0.19px;
+  color: var(--text-main);
+  font-weight: bold;
+  border: none;
+}

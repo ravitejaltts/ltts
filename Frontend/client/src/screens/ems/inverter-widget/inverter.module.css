@@ -1,0 +1,68 @@
+.inverterWidget {
+  background-color: var(--mode-bg-1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.topDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconAndTxt {
+  display: flex;
+  gap: 10px;
+}
+.txt {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.loads {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.loadLeft {
+  font-size: 44px;
+}
+
+.loadRight {
+  font-size: 24px;
+  color: var(--text-deemphasized);
+}
+
+.unit {
+  font-size: 24px;
+  color: var(--text-deemphasized);
+}
+
+.progressBarCont {
+  position: relative;
+}
+
+.progressBar {
+  height: 12px;
+  width: 100%;
+  background-color: var(--fills-background);
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.selected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 12px;
+  border-radius: 6px;
+}
+
+.iconAndTxt svg path {
+  fill: var(--textColor1);
+}
+
+.disableColor {
+  background-color: var(--fills-surface-2);
+}

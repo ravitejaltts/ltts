@@ -1,0 +1,243 @@
+.container {
+  padding: 24px;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  margin-top: 16px;
+}
+
+.weatherIcon {
+  padding-left: 16px;
+}
+
+.weatherIcon svg {
+  font-size: 40px;
+}
+
+.iconBar {
+  display: flex;
+  align-items: center;
+}
+
+.widgetBar {
+  padding-right: 16px;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+}
+
+.middleRow {
+  font-size: 50px;
+  max-height: 460px;
+  padding-left: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bottomRow {
+  background: var(--mode-black-op-25);
+  bottom: 0;
+  border-radius: 20px;
+  margin-top: auto;
+  position: relative;
+}
+
+.rightArrowBox {
+  position: absolute;
+  right: 0;
+  top: 30vh;
+  height: 120px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(80, 102, 121, 0.5);
+  justify-content: center;
+}
+
+.rightArrowBox svg {
+  font-size: 100px;
+}
+
+.widgets {
+  display: flex;
+  padding: 16px;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.iconBox {
+  display: flex;
+  background-color: var(--mode-white);
+  border-radius: 20px;
+  padding: 16px 8px;
+  max-height: 176px;
+  box-sizing: border-box;
+  width: 457px !important;
+  justify-content: space-around;
+}
+
+.homeLevels {
+  display: flex;
+  width: 455px !important;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.tempBox {
+  display: flex;
+  justify-content: center;
+  background-color: var(--mode-white);
+  border-radius: 20px;
+  padding: 16px 8px;
+  width: 178px;
+  max-height: 176px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+  height: 50px;
+  width: 100vw;
+}
+
+@media screen and (max-height: 700px) {
+  .weatherDesc {
+    font-size: 40px;
+  }
+}
+
+.currentBox {
+  color: var(--mode-text);
+  position: relative;
+  text-align: center;
+}
+
+.currentTextBox {
+  position: absolute;
+  top: 32%;
+  width: 100%;
+}
+
+.currentLevel {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.currentKW {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text-deemphasized);
+}
+
+.currentHeading {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text-deemphasized);
+}
+
+.currentSource {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.messageBox {
+  display: flex;
+  background-color: var(--mode-white);
+  border-radius: 20px;
+  padding: 10px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 84px;
+  width: 270px;
+  margin-right: 10px;
+  color: var(--mode-text);
+}
+
+.messageTextBox {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px;
+}
+
+.messageHeading {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text-deemphasized);
+}
+
+.messageText {
+  font-size: 19px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: 0.19px;
+}
+
+.smartContainer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 59%;
+}
+
+.sliderLevels {
+  display: flex;
+  gap: 8px;
+}
+
+.homeLevels > div:nth-child(n + 6) {
+  display: none;
+}
+
+.iconBox > div:nth-child(n + 6) {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .widgets {
+    padding-left: 12px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .iconBox {
+    padding: 8px;
+    width: 356px !important;
+    justify-content: space-around;
+  }
+
+  .tempBox {
+    padding: 8px;
+  }
+
+  .homeLevels {
+    width: 320px !important;
+    padding: 0;
+  }
+
+  .homeLevels > div:nth-child(n + 5) {
+    display: none;
+  }
+
+  .iconBox > div:nth-child(n + 5) {
+    display: none;
+  }
+}

@@ -1,0 +1,47 @@
+.container {
+  padding: 15px;
+  background-color: var(--bgColor3);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+.title {
+  font-size: 30px;
+  margin-left: 20px;
+}
+.controlBox {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+.decrease {
+  background-color: var(--bgInverted);
+  color: var(--textInverted);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.temperature {
+  margin: 0 10px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.increase {
+  background-color: var(--bgInverted);
+  color: var(--textInverted);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+}

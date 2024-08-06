@@ -1,0 +1,63 @@
+.closeIcon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .closeIcon path {
+    fill: var(--text-main);
+  }
+
+  .fanContainer {
+    background-color: var(--fills-surface-2);
+    height: 60vh;
+    padding: 20px 40px;
+    color: var(--textColor1);
+    box-sizing: border-box;
+    border-radius: 18px;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .heading {
+    text-align: center;
+    color: var(--text-main);
+    font-size: 30px;
+    width: 100%;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 24px;
+  }
+
+  .content {
+      display: flex;
+      justify-content: center;
+    align-items: center;
+    height: 80%;
+    box-sizing: border-box;
+  }
+
+  .btnContainer {
+    display: flex;
+    border: solid 1px var(--ui-elements-border);
+    border-radius: 100px;
+    overflow: hidden;
+    width: 430px;
+
+  }
+
+  .leftBtn, .heatBtn {
+    border-right: 1px solid var(--ui-elements-border);
+  }
+
+  .leftBtn, .rightBtn, .heatBtn {
+    padding: 30px 60px;
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .pillToggleButtonActive {
+    background-color: var(--textColor1);
+    color: var(--mode-bg-1);
+  }

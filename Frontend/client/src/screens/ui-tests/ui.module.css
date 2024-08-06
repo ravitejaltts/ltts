@@ -1,0 +1,331 @@
+.mainContainer {
+  background-color: var(--fills-background);
+  height: 100vh;
+  /* padding: 20px 20px 40px; */
+  color: var(--textColor1);
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  display: flex;
+}
+.backContainer {
+  background-color: var(--fills-surface-5);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.backNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backText {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+.backNav svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.backNav svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.leftDiv {
+  height: 100%;
+  background-color: var(--app-screen-left-bg);
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.rightDiv {
+  /* height: 500px; */
+  padding: 20px;
+  border-radius: 16px;
+  width: 62%;
+  display: inline-block;
+  margin-left: 8px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.categories {
+  margin: 12px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category {
+  font-size: 28px;
+  color: var(--text-deemphasized);
+}
+
+.toggleDiv {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.btnDiv {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.btnDiv > button {
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+.infoLabelDiv {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.sliderDiv {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 0px 10px;
+}
+
+.leftDivTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonWidget {
+  background-color: var(--mode-bg-1);
+  border: none;
+  color: var(--text-main);
+  display: block;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px 0;
+  height: 50px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.optionsWidget {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px 15px;
+}
+
+.optionsTopDiv {
+  gap: 10px;
+}
+
+.pillToggleButtonActive {
+  color: var(--textColor1);
+  font-weight: 900;
+}
+
+.activeOption {
+  background-color: var(--textColor1);
+  color: var(--mode-bg-1);
+  font-weight: bold;
+}
+
+.options {
+  border: solid 1px var(--ui-elements-divider-3);
+  border-radius: 100px;
+  overflow: hidden;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.option {
+  padding: 10px 30px;
+  font-size: 19px;
+  font-weight: 500;
+  flex-grow: 1;
+  text-align: center;
+  /* background-color: var(--textInverted); */
+  border-right: 1px solid var(--ui-elements-divider-3);
+}
+
+.waterContainer {
+  background-color: #0ca9da;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+
+.settingsContainer {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: var(--fills-surface-2);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settingsContainer svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.headerTitle {
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--mode-text);
+  margin-top: 24px;
+}
+
+/* presetSwitch */
+.line {
+  width: 42px;
+  height: 4px;
+  margin: 0 23px 20px 22px;
+  border-radius: 6px;
+  background-color: var(--fills-surface-2);
+}
+.title {
+  font-family: var(--font-family);
+  font-size: 44px;
+  text-align: center;
+  margin: 0 0 10px;
+  color: var(--mode-text);
+}
+/* systemContainer */
+.systemContainer {
+  display: flex;
+}
+
+.switchesText {
+  color: var(--textColor1);
+  font-family: var(--font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.19px;
+  text-align: left;
+}
+.presetSwitch {
+  border: 1px solid var(--ui-elements-divider);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
+
+.switchText {
+  font-family: var(--font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.19px;
+  text-align: center;
+  color: var(--text-deemphasized);
+}
+
+/* modal */
+
+.modal {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  width: 60vw;
+  transform: translate(-50%, 0%);
+  border-radius: 15px;
+}
+
+.row {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: var(--mode-bg-1);
+  border-radius: 16px;
+}
+
+.rowLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.centerTextDiv {
+  flex: 1;
+}
+
+.lightMasterText {
+  font-size: 24px;
+  text-align: left;
+  color: var(--mode-text);
+  margin: 0;
+}
+
+.lightsOnText {
+  font-family: var(--font-family);
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: var(--text-deemphasized);
+  margin: 0;
+}
+
+.active {
+  color: var(--text-main);
+}
+
+.levelWidget {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px 15px;
+}
+
+.levelWidgetSlider {
+  height: 35px;
+  background-color: var(--fills-surface-2);
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.levelWidgetSliderInner {
+  background-color: lightgray;
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+}

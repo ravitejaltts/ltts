@@ -1,0 +1,44 @@
+.row {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: var(--mode-bg-1);
+  border-radius: 16px;
+  height: 72px;
+  box-sizing: border-box;
+}
+.disabledIcon svg path {
+  fill: #d1d1d6;
+}
+
+.rowLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.centerTextDiv {
+  flex: 1;
+  border-right: 1px solid var(--ui-elements-divider-2);
+}
+
+.lightMasterText {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  color: var(--mode-text);
+  margin: 0;
+}
+
+.lightsOnText {
+  font-family: Roboto;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: var(--text-deemphasized);
+  margin: 0;
+}
+
+.disabled {
+  background-color: var(--fills-surface-2);
+}

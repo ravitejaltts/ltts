@@ -1,0 +1,46 @@
+.header {
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+}
+.headingText {
+  font-size: 24px;
+}
+.itemContainer {
+  margin: 24px 74px 0px;
+}
+
+.contentContainer {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+}
+.containerHeading {
+  color: var(--text-deemphasized);
+  font-size: 18px;
+  margin-left: 16px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.resetBtn {
+  width: 280px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 40px;
+  border-radius: 40px;
+  background-color: var(--mode-bg-1);
+  border: none;
+  font-family: var(--font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.19px;
+  text-align: center;
+  color: var(--text-main);
+  margin: 20px auto;
+}

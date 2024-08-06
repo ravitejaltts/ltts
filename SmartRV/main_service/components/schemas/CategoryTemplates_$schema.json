@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "id": {
+            "description": "unique identifier including category and modifier",
+            "type": "string"
+        },
+        "category": {
+            "description": "category",
+            "type": "string"
+        },
+        "version": {
+            "description": "version",
+            "type": "string"
+        },
+        "description": {
+            "description": "description",
+            "type": "string"
+        },
+        "type": {
+            "description": "type",
+            "type": "string",
+            "enum": [
+                "categoryTemplate"
+            ]
+        },
+        "deviceType": {
+            "description": "device Type - core if multiple device types, otherwise target device type",
+            "type": "string",
+            "default": "common"
+        },
+        "seriesModel": {
+            "description": "seriesModel",
+            "type": "string"
+        },
+        "floorPlan": {
+            "description": "floorPlan",
+            "type": "string"
+        },
+        "schemas": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        },
+                        "properties": {
+                            "type": "object"
+                        }
+                    }       
+                }
+            }
+        },
+        "categories": {
+            "type": "object",
+            "patternProperties": {
+                "^.*$": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "componentType": {
+                                "type": "string"
+                            },
+                            "instance": {
+                                "type": "integer"
+                            },
+                            "relatedComponents": {
+                                "type": "array",
+                                "description": "related components",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "category": {
+                                            "type": "string"
+                                        },
+                                        "componentType": {
+                                            "type": "string"
+                                        },
+                                        "instance": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "category",
+                                        "componentType",
+                                        "instance"
+                                    ]
+                                }
+                            },
+                            "state": {
+                                "type": "object",
+                                "properties": {
+                                    "path": {
+                                        "type": "string"
+                                    },
+                                    "overrideMappings": {
+                                        "type": "object"
+                                    },
+                                    "schema_request": {
+                                        "type": "string"
+                                    },
+                                    "schema_response": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }   
+                }
+            }
+        }
+    },
+    "required": [
+        "id",
+        "type",
+        "deviceType",
+        "categories"
+    ],
+    "additionalProperties": false
+}

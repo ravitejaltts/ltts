@@ -1,0 +1,137 @@
+@startuml
+object HALBase
+HALBase : update_can_state
+HALBase : set_state
+HALBase : get_state
+HALBase : init_config
+HALBase : get_system_overview
+HALBase : ...
+
+object LightingBase
+LightingBase : - save_lightingGroup
+LightingBase : - activate_lightingGroup
+LightingBase : - zone_control / set_zone
+LightingBase : - get_zone
+LightingBase : ...
+LightingBase : [Optional / TBD]
+LightingBase : toggle_master(Is a lightinggroup)
+LightingBase : get_lightingGroup
+
+
+object ClimateBase
+ClimateBase : - set_thermostat
+ClimateBase : - get_thermostat
+
+ClimateBase : - get_rooffan_state
+ClimateBase : - set_rooffan_state
+
+ClimateBase : - set_ac_state
+ClimateBase : - get_ac_state
+
+ClimateBase : - set_heater_state
+ClimateBase : - get_heater_state
+
+ClimateBase : - get_temp_state [Outdoor, Refrigerator, Freezer, ...]
+
+ClimateBase : [Optional / TBD]
+ClimateBase : ...
+
+
+object WatersystemsBase
+WatersystemsBase : - set_heater_state
+WatersystemsBase : - get_heater_state
+
+WatersystemsBase : - set_pump_state
+WatersystemsBase : - get_pump_state
+
+WatersystemsBase : - get_tank_state
+
+WatersystemsBase : [Optional / TBD]
+WatersystemsBase : ...
+
+
+object VehicleBase
+VehicleBase : - get_chassis_state
+VehicleBase : - get_propulsion_state
+
+VehicleBase : - set_power_source_state
+VehicleBase : - get_pwoer_source_state
+
+VehicleBase : - get_VIN
+
+VehicleBase : [Optional / TBD]
+VehicleBase : ...
+
+
+
+object EnergyBase
+EnergyBase : - get_chassis_state
+EnergyBase : - get_propulsion_state
+
+EnergyBase : - set_power_source_state
+EnergyBase : - get_pwoer_source_state
+
+EnergyBase : - get_VIN
+
+EnergyBase : [Optional / TBD]
+EnergyBase : ...
+
+
+object SystemBase
+SystemBase : - get_cpu_load
+SystemBase : - get_memory_usage
+
+SystemBase : - set_display_state
+SystemBase : - get_display_state
+
+SystemBase : [Optional / TBD]
+SystemBase : ...
+
+
+object Lighting800
+object Lighting500
+object LightingDom
+
+
+object ITC
+ITC : ...
+
+object CZoneCXP
+CZoneCXP : ...
+
+object CZoneSI
+CZoneSI : ...
+
+object CZoneSCI
+CZoneSCI : ...
+
+object CZoneRV1
+CZoneRV1 : ...
+
+map CircuitCfg {
+    zone_id => circuit_id
+}
+
+HALBase <|-- ClimateBase
+HALBase <|-- WatersystemsBase
+HALBase <|-- VehicleBase
+HALBase <|-- EnergyBase
+HALBase <|-- SystemBase
+
+
+HALBase <|-- LightingBase
+LightingBase <|-- Lighting800
+LightingBase <|-- Lighting500
+LightingBase <|-- LightingDom
+
+Lighting800 <--> ITC
+Lighting800 <--> CZoneCXP
+Lighting800 <-- CZoneSCI
+
+Lighting500 <--> ITC
+Lighting500 <--> CZoneRV1
+Lighting500 <-- CZoneSI
+
+CZoneRV1 --> CircuitCfg
+
+@enduml

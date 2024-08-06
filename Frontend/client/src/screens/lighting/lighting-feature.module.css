@@ -1,0 +1,29 @@
+.disable {
+  color: var(--text-deemphasized) !important;
+}
+
+.disableBg {
+  background-color: var(--text-deemphasized) !important;
+}
+
+.featureBottomContainer {
+  display: flex;
+  gap: 3px;
+  margin-top: 3px;
+  align-items: center;
+}
+
+.circle {
+  margin: 0;
+  height: 15px;
+  width: 15px;
+  /* background-color: red; */
+  border-radius: 50%;
+  /* display: inline-block; */
+  border: 1px solid var(--mode-text);
+}
+
+.percentage {
+  font-size: 18px;
+  margin-left: 5px;
+}

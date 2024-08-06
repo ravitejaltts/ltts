@@ -1,0 +1,122 @@
+.settings {
+  background-color: var(--fills-surface-2);
+  /* height: 100vh; */
+  padding: 24px;
+  /* text-align: center; */
+  height: 600px;
+  overflow: scroll;
+  border-radius: 15px;
+  /* padding: 20px 10px 30px 10px; */
+  box-sizing: border-box;
+}
+
+.max {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+}
+
+.closeIcon {
+  height: 40px;
+  width: 40px;
+}
+
+.closeIcon path {
+  fill: var(--text-main);
+}
+
+.heading {
+  text-align: center;
+  color: var(--text-main);
+  /*font-size: 30px;*/
+  width: 100%;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 24px;
+}
+
+.infoText {
+  color: var(--text-deemphasized);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.infoContainer {
+  background-color: var(--mode-bg-1);
+  border-radius: 15px;
+}
+
+/* back */
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.back svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.back h2 {
+  margin: 0;
+  color: var(--mode-text);
+}
+
+.grpHeading {
+  margin-top: 32px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.44px;
+  text-align: left;
+  color: var(--text-deemphasized);
+}
+
+.windSensorSubText {
+  font-size: 18px;
+  color: var(--text-deemphasized);
+  margin: 10px;
+}
+
+.windSensorSubTextB {
+  font-size: 18px;
+  color: var(--text-deemphasized);
+  margin: 10px;
+  font-weight: bold;
+}
+
+.sensitivityContainer {
+  margin-top: 40px;
+}
+
+.controllerBox {
+  padding: 16px;
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+}
+
+.restoreBtn {
+  width: 429px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+  padding: 16px 40px;
+  border-radius: 40px;
+  background-color: var(--mode-bg-1);
+  border: none;
+  color: var(--mode-text);
+  font-size: 19px;
+  font-weight: bold;
+}

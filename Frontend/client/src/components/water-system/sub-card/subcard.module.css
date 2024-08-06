@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.icon {
+  padding-right: 15px;
+  font-size: 90px !important;
+}
+.text1 {
+  font-size: 30px;
+  margin: 0;
+}
+.text2 {
+  font-size: 24px;
+  color: var(--textColor2);
+  margin: 0;
+}
+.text2 span {
+  color: var(--textColor1);
+}

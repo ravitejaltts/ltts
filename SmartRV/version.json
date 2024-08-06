@@ -1,0 +1,16 @@
+{
+    "version": "1.1.2",
+    "date": "2024-08-06 07:25:58.289313",
+    "modules": {
+        "main_service": "1.1.12",
+        "can_service": "1.0.3",
+        "iot_service": "1.0.8",
+        "system_service": "1.0.0",
+        "hmi_tools": "0.2.6",
+        "common_libs": "1.0.8",
+        "bt_service": "1.0.0",
+        "data": "1.1.10",
+        "update_service": "1.0.4",
+        "kiosk_config": "0.1.10"
+    }
+}

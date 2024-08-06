@@ -1,0 +1,1366 @@
+{
+    "version": "1",
+    "deviceType": "vanilla",
+    "type": "template",
+    "seriesModel": "vanilla",
+    "floorPlan": "VANILLA",
+    "messageVersion": "1",
+    "hardwareVersion": "SECORev1",
+    "description": "seriesModels will be read in to determine component configuration",
+    "targets": [
+        {
+            "id": "standard",
+            "evt": "0",
+            "mtp": "1",
+            "intervalSeconds": 600
+        },
+        {
+            "id": "event",
+            "evt": "0",
+            "mtp": "2",
+            "intervalSeconds": 5
+        },
+        {
+            "id": "daily",
+            "evt": "0",
+            "mtp": "3",
+            "intervalSeconds": 86400
+        },
+        {
+            "id": "alert",
+            "evt": "1",
+            "mtp": "2",
+            "intervalSeconds": 5
+        },
+        {
+            "id": "ota",
+            "evt": "2",
+            "mtp": "2",
+            "intervalSeconds": 5
+        },
+        {
+            "id": "request",
+            "evt": "3",
+            "mtp": "2",
+            "intervalSeconds": 5
+        },
+        {
+            "id": "settings",
+            "evt": "4",
+            "mtp": "2",
+            "intervalSeconds": 5
+        },
+        {
+            "id": "$twin",
+            "intervalSeconds": 600,
+            "intervalSecondsChatty": 2
+        }
+    ],
+    "routings": [
+        {
+            "id": "1Avg",
+            "target": "standard",
+            "aggregation": "average",
+            "code": "{componentType.code}[$INSTANCE]{code}Avg"
+        },
+        {
+            "id": "1Min",
+            "target": "standard",
+            "aggregation": "minimum",
+            "code": "{componentType.code}[$INSTANCE]{code}Min"
+        },
+        {
+            "id": "1Max",
+            "target": "standard",
+            "aggregation": "minimum",
+            "code": "{componentType.code}[$INSTANCE]{code}Max"
+        },
+        {
+            "id": "1",
+            "target": "standard",
+            "code": "{componentType.code}[$INSTANCE]{code}"
+        },
+        {
+            "id": "2",
+            "target": "event",
+            "code": "{componentType.code}[$INSTANCE]{code}"
+        },
+        {
+            "id": "3",
+            "target": "daily",
+            "code": "{componentType.code}[$INSTANCE]{code}"
+        },
+        {
+            "id": "twin",
+            "target": "$twin",
+            "code": "{category}.{componentType.code}[$INSTANCE].{code}"
+        },
+        {
+            "id": "twinNs",
+            "target": "$twin",
+            "code": "{componentType.code}[$INSTANCE].{code}"
+        }
+    ],
+    "deepObjectSeparator": ".",
+    "alert_items": {},
+    "properties": [
+        {
+            "id": 11800,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 11801,
+            "code": "active",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]active",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].active"
+                }
+            ]
+        },
+        {
+            "id": 11802,
+            "code": "watts",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]watts",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].watts"
+                }
+            ]
+        },
+        {
+            "id": 11803,
+            "code": "vltg",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]vltg",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].vltg"
+                }
+            ]
+        },
+        {
+            "id": 11804,
+            "code": "cur",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]cur",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].cur"
+                }
+            ]
+        },
+        {
+            "id": 11200,
+            "code": "temp",
+            "category": "energy",
+            "componentTypeCode": "ba",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "ba[#]temp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ba[#].temp"
+                }
+            ]
+        },
+        {
+            "id": 12000,
+            "code": "lvl",
+            "category": "energy",
+            "componentTypeCode": "ft",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "ft[#]lvl",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ft[#].lvl"
+                }
+            ]
+        },
+        {
+            "id": 11800,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 11801,
+            "code": "active",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]active",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].active"
+                }
+            ]
+        },
+        {
+            "id": 11802,
+            "code": "watts",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]watts",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].watts"
+                }
+            ]
+        },
+        {
+            "id": 11803,
+            "code": "vltg",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]vltg",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].vltg"
+                }
+            ]
+        },
+        {
+            "id": 11804,
+            "code": "cur",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]cur",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].cur"
+                }
+            ]
+        },
+        {
+            "id": 5000,
+            "code": "onOff",
+            "category": "watersystems",
+            "componentTypeCode": "wh",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "wh[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "watersystems.wh[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 5800,
+            "code": "mode",
+            "category": "movables",
+            "componentTypeCode": "lj",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "lj[#]mode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "movables.lj[#].mode"
+                }
+            ]
+        },
+        {
+            "id": 6601,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "ge",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ge[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ge[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 6602,
+            "code": "mode",
+            "category": "energy",
+            "componentTypeCode": "ge",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ge[#]mode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ge[#].mode"
+                }
+            ]
+        },
+        {
+            "id": 9400,
+            "code": "temp",
+            "category": "climate",
+            "componentTypeCode": "rf",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "rf[#]temp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.rf[#].temp"
+                }
+            ]
+        },
+        {
+            "id": 7800,
+            "code": "temp",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]temp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].temp"
+                }
+            ]
+        },
+        {
+            "id": 7809,
+            "code": "soc",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]soc",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].soc"
+                }
+            ]
+        },
+        {
+            "id": 7801,
+            "code": "vltg",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]vltg",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].vltg"
+                }
+            ]
+        },
+        {
+            "id": 7802,
+            "code": "dcCur",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]dcCur",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].dcCur"
+                }
+            ]
+        },
+        {
+            "id": 7803,
+            "code": "dcPwr",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]dcPwr",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].dcPwr"
+                }
+            ]
+        },
+        {
+            "id": 7808,
+            "code": "tte",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]tte",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].tte"
+                }
+            ]
+        },
+        {
+            "id": 7807,
+            "code": "minsTillFull",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]minsTillFull",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].minsTillFull"
+                }
+            ]
+        },
+        {
+            "id": 7806,
+            "code": "minsTillEmpty",
+            "category": "energy",
+            "componentTypeCode": "bm",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "bm[#]minsTillEmpty",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.bm[#].minsTillEmpty"
+                }
+            ]
+        },
+        {
+            "id": 7204,
+            "code": "onOff",
+            "category": "climate",
+            "componentTypeCode": "he",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "he[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.he[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 7203,
+            "code": "heatSrc",
+            "category": "climate",
+            "componentTypeCode": "he",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "he[#]heatSrc",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.he[#].heatSrc"
+                }
+            ]
+        },
+        {
+            "id": 6802,
+            "code": "temp",
+            "category": "climate",
+            "componentTypeCode": "th",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "th[#]temp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.th[#].temp"
+                }
+            ]
+        },
+        {
+            "id": 6803,
+            "code": "setTempHeat",
+            "category": "climate",
+            "componentTypeCode": "th",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "th[#]setTempHeat",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.th[#].setTempHeat"
+                }
+            ]
+        },
+        {
+            "id": 6804,
+            "code": "setTempCool",
+            "category": "climate",
+            "componentTypeCode": "th",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "th[#]setTempCool",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.th[#].setTempCool"
+                }
+            ]
+        },
+        {
+            "id": 6816,
+            "code": "mode",
+            "category": "climate",
+            "componentTypeCode": "th",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "th[#]mode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.th[#].mode"
+                }
+            ]
+        },
+        {
+            "id": 7400,
+            "code": "onOff",
+            "category": "climate",
+            "componentTypeCode": "he",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "he[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.he[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 7000,
+            "code": "comp",
+            "category": "climate",
+            "componentTypeCode": "ac",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ac[#]comp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.ac[#].comp"
+                }
+            ]
+        },
+        {
+            "id": 7002,
+            "code": "fanMode",
+            "category": "climate",
+            "componentTypeCode": "ac",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ac[#]fanMode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.ac[#].fanMode"
+                }
+            ]
+        },
+        {
+            "id": 7001,
+            "code": "fanSpd",
+            "category": "climate",
+            "componentTypeCode": "ac",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ac[#]fanSpd",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.ac[#].fanSpd"
+                }
+            ]
+        },
+        {
+            "id": 6000,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "ei",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ei[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ei[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 65535,
+            "code": "load",
+            "category": "energy",
+            "componentTypeCode": "ei",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ei[#]load",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ei[#].load"
+                }
+            ]
+        },
+        {
+            "id": 65535,
+            "code": "overld",
+            "category": "energy",
+            "componentTypeCode": "ei",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ei[#]overld",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ei[#].overld"
+                }
+            ]
+        },
+        {
+            "id": 11800,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 11801,
+            "code": "active",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]active",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].active"
+                }
+            ]
+        },
+        {
+            "id": 11802,
+            "code": "watts",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]watts",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].watts"
+                }
+            ]
+        },
+        {
+            "id": 11803,
+            "code": "vltg",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]vltg",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].vltg"
+                }
+            ]
+        },
+        {
+            "id": 11804,
+            "code": "cur",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]cur",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].cur"
+                }
+            ]
+        },
+        {
+            "id": 11800,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 11801,
+            "code": "active",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "es[#]active",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].active"
+                }
+            ]
+        },
+        {
+            "id": 11802,
+            "code": "watts",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]watts",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].watts"
+                }
+            ]
+        },
+        {
+            "id": 11803,
+            "code": "vltg",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]vltg",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].vltg"
+                }
+            ]
+        },
+        {
+            "id": 11804,
+            "code": "cur",
+            "category": "energy",
+            "componentTypeCode": "es",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "es[#]cur",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.es[#].cur"
+                }
+            ]
+        },
+        {
+            "id": 6201,
+            "code": "onOff",
+            "category": "lighting",
+            "componentTypeCode": "lz",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "lz[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "lighting.lz[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 6000,
+            "code": "onOff",
+            "category": "energy",
+            "componentTypeCode": "ei",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ei[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ei[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 7000,
+            "code": "comp",
+            "category": "climate",
+            "componentTypeCode": "ac",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ac[#]comp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.ac[#].comp"
+                }
+            ]
+        },
+        {
+            "id": 7002,
+            "code": "fanMode",
+            "category": "climate",
+            "componentTypeCode": "ac",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ac[#]fanMode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.ac[#].fanMode"
+                }
+            ]
+        },
+        {
+            "id": 7001,
+            "code": "fanSpd",
+            "category": "climate",
+            "componentTypeCode": "ac",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ac[#]fanSpd",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.ac[#].fanSpd"
+                }
+            ]
+        },
+        {
+            "id": 5600,
+            "code": "mode",
+            "category": "movables",
+            "componentTypeCode": "so",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "so[#]mode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "movables.so[#].mode"
+                }
+            ]
+        },
+        {
+            "id": 5000,
+            "code": "onOff",
+            "category": "watersystems",
+            "componentTypeCode": "wh",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "wh[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "watersystems.wh[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 5001,
+            "code": "temp",
+            "category": "watersystems",
+            "componentTypeCode": "wh",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "wh[#]temp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "watersystems.wh[#].temp"
+                }
+            ]
+        },
+        {
+            "id": 5002,
+            "code": "setTemp",
+            "category": "watersystems",
+            "componentTypeCode": "wh",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "wh[#]setTemp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "watersystems.wh[#].setTemp"
+                }
+            ]
+        },
+        {
+            "id": 6602,
+            "code": "mode",
+            "category": "energy",
+            "componentTypeCode": "ge",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "ge[#]mode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "energy.ge[#].mode"
+                }
+            ]
+        },
+        {
+            "id": 5200,
+            "code": "onOff",
+            "category": "watersystems",
+            "componentTypeCode": "wp",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "wp[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "watersystems.wp[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 6201,
+            "code": "onOff",
+            "category": "lighting",
+            "componentTypeCode": "lz",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "lz[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "lighting.lz[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 6203,
+            "code": "brt",
+            "category": "lighting",
+            "componentTypeCode": "lz",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "lz[#]brt",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "lighting.lz[#].brt"
+                }
+            ]
+        },
+        {
+            "id": 8600,
+            "code": "lvl",
+            "category": "watersystems",
+            "componentTypeCode": "wt",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "wt[#]lvl",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "watersystems.wt[#].lvl"
+                }
+            ]
+        },
+        {
+            "id": 6815,
+            "code": "temp",
+            "category": "climate",
+            "componentTypeCode": "th",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "th[#]temp",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.th[#].temp"
+                }
+            ]
+        },
+        {
+            "id": 5400,
+            "code": "mode",
+            "category": "movables",
+            "componentTypeCode": "aw",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "aw[#]mode",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "movables.aw[#].mode"
+                }
+            ]
+        },
+        {
+            "id": 5401,
+            "code": "pctExt",
+            "category": "movables",
+            "componentTypeCode": "aw",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "aw[#]pctExt",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "movables.aw[#].pctExt"
+                }
+            ]
+        },
+        {
+            "id": 5402,
+            "code": "mtnSense",
+            "category": "movables",
+            "componentTypeCode": "aw",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "aw[#]mtnSense",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "movables.aw[#].mtnSense"
+                }
+            ]
+        },
+        {
+            "id": 5406,
+            "code": "mtnSenseOnOff",
+            "category": "movables",
+            "componentTypeCode": "aw",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "aw[#]mtnSenseOnOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "movables.aw[#].mtnSenseOnOff"
+                }
+            ]
+        },
+        {
+            "id": 6201,
+            "code": "onOff",
+            "category": "lighting",
+            "componentTypeCode": "lz",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "lz[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "lighting.lz[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 6203,
+            "code": "brt",
+            "category": "lighting",
+            "componentTypeCode": "lz",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "lz[#]brt",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "lighting.lz[#].brt"
+                }
+            ]
+        },
+        {
+            "id": 8200,
+            "code": "onOff",
+            "category": "climate",
+            "componentTypeCode": "rv",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "rv[#]onOff",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.rv[#].onOff"
+                }
+            ]
+        },
+        {
+            "id": 8201,
+            "code": "dome",
+            "category": "climate",
+            "componentTypeCode": "rv",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "rv[#]dome",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.rv[#].dome"
+                }
+            ]
+        },
+        {
+            "id": 8202,
+            "code": "direction",
+            "category": "climate",
+            "componentTypeCode": "rv",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "rv[#]direction",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.rv[#].direction"
+                }
+            ]
+        },
+        {
+            "id": 8203,
+            "code": "fanSpd",
+            "category": "climate",
+            "componentTypeCode": "rv",
+            "routings": [
+                {
+                    "target": "standard",
+                    "code": "rv[#]fanSpd",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.rv[#].fanSpd"
+                }
+            ]
+        },
+        {
+            "id": 8204,
+            "code": "rain",
+            "category": "climate",
+            "componentTypeCode": "rv",
+            "routings": [
+                {
+                    "target": "event",
+                    "code": "rv[#]rain",
+                    "aggregation": "latest"
+                },
+                {
+                    "target": "$twin",
+                    "code": "climate.rv[#].rain"
+                }
+            ]
+        }
+    ]
+}

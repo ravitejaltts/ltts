@@ -1,0 +1,1145 @@
+{
+    "$schema": "./$schema.json",
+    "id": "sbox.sandbox.MOCK",
+    "type": "componentGroup",
+    "description": "component groups allow us to piece together rv components based on its device type, model, floorplan starting with lowest to greatest specificity",
+    "deviceType": "sbox",
+    "seriesModel": "sandbox",
+    "floorPlan": "MOCK",
+    "attributes": {
+        "name": "MOCK",
+        "seriesName": "MOCK",
+        "seriesCode": "X500",
+        "version": "1.0.0"
+    },
+    "optionCodes": [],
+    "filters": {
+        "modelYears": [
+            "2025"
+        ]
+    },
+    "components": [
+        {
+            "componentTypeId": "vehicle.ch_sprinter_psm",
+            "instance": 1,
+            "attributes": {
+                "description": "Mercedes Sprinter Chassis with PSM module",
+                "name": "Mercedes Sprinter",
+                "controllable": "N"
+            },
+            "meta": {
+                "manufacturer": "Mercedes Benz - TrucksX",
+                "model": "Sprinter",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "climate.th_virtual",
+            "instance": 1,
+            "attributes": {
+                "controllable": "NF",
+                "description": "Virtual Thermostat - Wired",
+                "name": "Thermostat",
+                "type": "MAIN",
+                "options": [
+                    "TEST",
+                    "AC-4-WIRE"
+                ]
+            },
+            "meta": {
+                "manufacturer": "Winnebago",
+                "model": "WinnConnect Virtual Thermostat",
+                "part": "WC-TH-VIRTUAL-WIRED"
+            }
+        },
+        {
+            "componentTypeId": "vehicle.dl_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Handles the door lock/unlock state of the house vs. the chassis",
+                "name": "Door Lock / Unlock",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "TriMark",
+                "model": "36517-01",
+                "part": "N/A"
+            }
+        },
+        {
+            "componentTypeId": "climate.he_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Dometic LP Furnace",
+                "name": "Heater (LP Furnace)",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "Dometic Corporation",
+                "model": "20298",
+                "part": "DFMD25"
+            }
+        },
+        {
+            "componentTypeId": "climate.rf_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Dometic fridge ?",
+                "name": "Refrigerator",
+                "controllable": "NF",
+                "type": "REFRIGERATOR"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "climate.rf_basic",
+            "instance": 2,
+            "attributes": {
+                "description": "Freezer compartment",
+                "name": "Freezer",
+                "controllable": "NF",
+                "type": "FREEZER"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "climate.rv_advanced",
+            "instance": 1,
+            "attributes": {
+                "description": "Main Roof Fan",
+                "name": "Galley Vent",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "Dometic",
+                "model": "FanTastic 5300",
+                "part": "FV5300HWUWD81-SP"
+            }
+        },
+        {
+            "componentTypeId": "climate.rv_advanced",
+            "instance": 2,
+            "attributes": {
+                "description": "Bath Roof Fan",
+                "name": "Bathroom Vent",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "Dometic",
+                "model": "FanTastic 5300",
+                "part": "FV5300HWUWD81-SP"
+            }
+        },
+        {
+            "componentTypeId": "climate.ac_rvc_ge",
+            "instance": 1,
+            "attributes": {
+                "description": "Air conditioner option 29J - GE with Heatpump",
+                "name": "GE - Air Conditioning",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "GE Appliances",
+                "model": "ARH15AAC",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "climate.he_heatpump",
+                    "instance": 2
+                }
+            ],
+            "filters": {
+                "optionCodes": "29J"
+            }
+        },
+        {
+            "componentTypeId": "climate.he_heatpump",
+            "instance": 2,
+            "attributes": {
+                "description": "GE AC Heatpump Component",
+                "name": "GE AC Heatpump",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "GE Appliances",
+                "model": "ARH15AAC",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "climate.ac_rvc_ge",
+                    "instance": 1
+                },
+                {
+                    "componentTypeId": "energy.ft_basic",
+                    "instance": 1
+                },
+                {
+                    "componentTypeId": "energy.bm_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "climate.th_outdoor",
+            "instance": 2,
+            "attributes": {
+                "controllable": "NF",
+                "description": "Outdoor Temp Sensor",
+                "name": "Outdoor",
+                "type": "OUTDOOR"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "connectivity.ce_cradlepoint",
+            "instance": 1,
+            "attributes": {
+                "description": "Connectivity Unit",
+                "name": "Cradlepoint - S700",
+                "controllable": "NF",
+                "type": "CRADLEPOINT-S700"
+            },
+            "meta": {
+                "manufacturer": "Cradlepoint",
+                "model": "S700",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "energy.bm_basic",
+            "instance": 1,
+            "attributes": {
+                "type": "LITHIONICS",
+                "description": "BMS",
+                "name": "Battery Management",
+                "controllable": "NF",
+                "nominalVoltage": "12.8V",
+                "minSoc": 10
+            },
+            "meta": {
+                "manufacturer": "Lithionics",
+                "model": "74-221-UL",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.ba_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "energy.ba_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Default battery pack",
+                "name": "LITHIONICS IONGEN",
+                "controllable": "NF",
+                "type": "LITHIONICS",
+                "cap": "320AH"
+            },
+            "meta": {
+                "manufacturer": "Lithionics",
+                "model": "74-221-UL",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.bm_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "energy.ba_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Defaul battery pack",
+                "name": "LITHIONICS IONGEN",
+                "controllable": "NF",
+                "type": "LITHIONICS",
+                "cap": "640AH"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.bm_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "energy.ba_basic",
+            "instance": 2,
+            "attributes": {
+                "description": "Defaul battery pack",
+                "name": "LITHIONICS IONGEN",
+                "controllable": "NF",
+                "type": "LITHIONICS",
+                "cap": "320AH"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.bm_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "energy.ei_rvc",
+            "instance": 1,
+            "attributes": {
+                "description": "Inverter Component",
+                "name": "Inverter",
+                "controllable": "NF",
+                "type": "RVC",
+                "state.maxLoad": 2000
+            },
+            "meta": {
+                "manufacturer": "XANTREX",
+                "model": "Freedom XC Pro 2000",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "energy.ec_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Energy Consumer for AC",
+                "name": "AC - Total",
+                "controllable": "NF",
+                "type": "AC",
+                "acc": "MEASURED"
+            }
+        },
+        {
+            "componentTypeId": "energy.ec_basic",
+            "instance": 2,
+            "attributes": {
+                "description": "Energy Consumer for DC",
+                "name": "DC - Total",
+                "controllable": "NF",
+                "type": "DC",
+                "acc": "MEASURED"
+            }
+        },
+        {
+            "componentTypeId": "energy.es_solar_rvc",
+            "instance": 1,
+            "attributes": {
+                "type": "SOLAR",
+                "name": "Solar",
+                "description": "Solar Controller Source"
+            },
+            "meta": {
+                "manufacturer": "XANTREX",
+                "model": "710-3024-01",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "energy.es_shore_rvc",
+            "instance": 2,
+            "attributes": {
+                "type": "SHORE",
+                "name": "Shore",
+                "description": "Shore Power Source"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "energy.es_alternator_rvc",
+            "instance": 3,
+            "attributes": {
+                "type": "WAKESPEED",
+                "name": "Alternator",
+                "description": "Alternator Power Source"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "energy.es_generator_src",
+            "instance": 4,
+            "attributes": {
+                "type": "GENERATOR",
+                "description": "Generator Power Source",
+                "name": "Generator",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "RVMP",
+                "model": "4000K LP/GAS",
+                "part": "N/A"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.ge_propane",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "energy.ft_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Liquid Propane",
+                "name": "Liquid Propane",
+                "controllable": "N",
+                "type": "LP",
+                "cap": 30,
+                "unit": "G"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.ge_propane",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "energy.ge_propane",
+            "instance": 1,
+            "attributes": {
+                "fuelSource": "PROPANE",
+                "lockoutStates": [
+                    {
+                        "eventValue": 4003,
+                        "triggerValue": true
+                    },
+                    {
+                        "eventValue": 4002,
+                        "triggerValue": true,
+                        "timerBased": true,
+                        "timerDefaultSecs": 300,
+                        "default": false
+                    }
+                ],
+                "warningStates": [
+                    {
+                        "eventValue": 599,
+                        "triggerValue": true
+                    }
+                ],
+                "description": "RVMP LP Generator",
+                "name": "Generator",
+                "controllable": "NF",
+                "circuitId": "4-13"
+            },
+            "meta": {
+                "manufacturer": "RVMP",
+                "model": "4000K LP/GAS",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.ft_basic",
+                    "instance": 1
+                },
+                {
+                    "componentTypeId": "energy.es_generator_src",
+                    "instance": 4
+                }
+            ]
+        },
+        {
+            "componentTypeId": "lighting.lz_dimmable",
+            "instance": 1,
+            "attributes": {
+                "description": "Dimmable Light Zone",
+                "name": "Dim 1",
+                "controllable": "NF",
+                "type": "DIM__ITC_CHANNEL"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "lighting.lz_dimmable",
+            "instance": 2,
+            "attributes": {
+                "description": "Dimmable Light Zone",
+                "name": "Dim 2",
+                "controllable": "NF",
+                "type": "DIM__ITC_CHANNEL"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "lighting.lz_dimmable",
+            "instance": 3,
+            "attributes": {
+                "description": "Dimmable Light Zone",
+                "name": "Dim 3",
+                "controllable": "NF",
+                "type": "DIM__ITC_CHANNEL"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "lighting.lz_dimmable",
+            "instance": 17,
+            "attributes": {
+                "description": "Awning light",
+                "name": "Awning Light",
+                "controllable": "NF",
+                "exterior": true,
+                "type": "RVC__DC_DIMMER",
+                "canInstance": 1
+            },
+            "meta": {
+                "manufacturer": "CareFree",
+                "model": "",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "movables.aw_rvc",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "lighting.lg_smart",
+            "instance": 0,
+            "attributes": {
+                "description": "Smart light group",
+                "name": "Smarttoggle",
+                "controllable": "NF",
+                "type": "LG_SMART"
+            }
+        },
+        {
+            "componentTypeId": "lighting.lg_smart",
+            "instance": 101,
+            "attributes": {
+                "description": "Smart lighting group for all lights",
+                "name": "All Lights",
+                "controllable": "NF",
+                "type": "LG_ALL"
+            }
+        },
+        {
+            "componentTypeId": "lighting.lg_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "User Preset 1",
+                "name": "Preset 1",
+                "controllable": "NF",
+                "type": "LG_PRESET"
+            }
+        },
+        {
+            "componentTypeId": "lighting.lg_basic",
+            "instance": 2,
+            "attributes": {
+                "description": "User Preset 2",
+                "name": "Preset 2",
+                "controllable": "NF",
+                "type": "LG_PRESET"
+            }
+        },
+        {
+            "componentTypeId": "lighting.lg_basic",
+            "instance": 3,
+            "attributes": {
+                "description": "User Preset 3",
+                "name": "Preset 3",
+                "controllable": "NF",
+                "type": "LG_PRESET"
+            }
+        },
+        {
+            "componentTypeId": "lighting.lg_basic",
+            "instance": 99,
+            "attributes": {
+                "description": "Interior light group",
+                "name": "Interior",
+                "controllable": "NF",
+                "type": "LG_INTERIOR"
+            }
+        },
+        {
+            "componentTypeId": "lighting.lg_basic",
+            "instance": 100,
+            "attributes": {
+                "description": "Exterior light group",
+                "name": "Exterior",
+                "controllable": "NF",
+                "type": "LG_EXTERIOR"
+            }
+        },
+        {
+            "componentTypeId": "movables.aw_rvc",
+            "instance": 1,
+            "attributes": {
+                "deadmanSwitch": 1,
+                "deadmanInitialPauseMs": 1000,
+                "deadmanSendIntervalMs": 100,
+                "deadmanProperty": "mode",
+                "deadmanReleaseValue": 0,
+                "controllable": "NS",
+                "special-states": [
+                    {
+                        "mode": 567,
+                        "setPctExt": 0
+                    },
+                    {
+                        "setPctExt": 0
+                    }
+                ],
+                "lockoutStates": [
+                    {
+                        "eventValue": 580,
+                        "triggerValue": true
+                    }
+                ],
+                "warningStates": [
+                    {
+                        "eventValue": 570,
+                        "triggerValue": true
+                    },
+                    {
+                        "eventValue": 544,
+                        "triggerValue": false
+                    }
+                ],
+                "description": "Awning - RVC",
+                "name": "Awning"
+            },
+            "meta": {
+                "manufacturer": "CareFree of Colorado",
+                "model": "DRCHub / Awning",
+                "part": "R002039 / IJ1926EJV8LL"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "lighting.lz_dimmable",
+                    "instance": 17
+                },
+                {
+                    "componentTypeId": "system.lk_basic",
+                    "instance": 580
+                }
+            ]
+        },
+        {
+            "componentTypeId": "movables.lj_rvc",
+            "instance": 1,
+            "attributes": {
+                "controllable": "N",
+                "lockoutStates": [
+                    {
+                        "eventValue": 544,
+                        "triggerValue": false
+                    },
+                    {
+                        "eventValue": 580,
+                        "triggerValue": false
+                    },
+                    {
+                        "eventValue": 595,
+                        "triggerValue": true
+                    }
+                ],
+                "description": "Leveling Jackss - RVC",
+                "name": "Leveling Jack"
+            },
+            "meta": {
+                "manufacturer": "",
+                "model": "",
+                "part": ""
+            }
+        },
+        {
+            "componentTypeId": "movables.so_basic",
+            "instance": 1,
+            "attributes": {
+                "deadmanSwitch": 1,
+                "deadmanInitialPauseMs": 1000,
+                "deadmanSendIntervalMs": 100,
+                "deadmanProperty": "mode",
+                "deadmanReleaseValue": 0,
+                "controllable": "N",
+                "lockoutStates": [
+                    {
+                        "eventValue": 579,
+                        "triggerValue": false
+                    }
+                ],
+                "warningStates": [
+                    {
+                        "eventValue": 570,
+                        "triggerValue": true
+                    }
+                ],
+                "description": "Main Slideout",
+                "name": "Slide 1"
+            },
+            "meta": {
+                "manufacturer": "Lippert",
+                "model": "700156",
+                "part": "000235616"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "system.lk_basic",
+                    "instance": 544
+                }
+            ]
+        },
+        {
+            "componentTypeId": "movables.so_basic",
+            "instance": 2,
+            "attributes": {
+                "deadmanSwitch": 1,
+                "deadmanInitialPauseMs": 1000,
+                "deadmanSendIntervalMs": 100,
+                "deadmanProperty": "mode",
+                "deadmanReleaseValue": 0,
+                "controllable": "N",
+                "lockoutStates": [
+                    {
+                        "eventValue": 579,
+                        "triggerValue": false
+                    }
+                ],
+                "warningStates": [
+                    {
+                        "eventValue": 570,
+                        "triggerValue": true
+                    }
+                ],
+                "description": "",
+                "name": "Slide 2"
+            },
+            "meta": {
+                "manufacturer": "Lippert",
+                "model": "700156",
+                "part": "000235616"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "system.lk_basic",
+                    "instance": 544
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wt_default",
+            "instance": 1,
+            "attributes": {
+                "description": "Fresh Water",
+                "name": "Fresh Water",
+                "controllable": "NF",
+                "type": "FRESH",
+                "cap": 30,
+                "unit": "G",
+                "uiclass": "FreshTankLevel",
+                "vltgMin": "0.5",
+                "vltgMax": "1.29"
+            },
+            "meta": {
+                "manufacturer": "Winnebago",
+                "model": "",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wp_default",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wt_default",
+            "instance": 2,
+            "attributes": {
+                "description": "Gray Water",
+                "name": "Gray Water",
+                "controllable": "NF",
+                "type": "GREY",
+                "cap": 46,
+                "unit": "G",
+                "uiclass": "GreyTankLevel",
+                "vltgMin": "0.5",
+                "vltgMax": "1.346"
+            },
+            "meta": {
+                "manufacturer": "Winnebago",
+                "model": "",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wh_tankpad",
+                    "instance": 2
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wt_default",
+            "instance": 3,
+            "attributes": {
+                "description": "Black Water",
+                "name": "Black Water",
+                "controllable": "NF",
+                "type": "BLACK",
+                "cap": 47,
+                "unit": "G",
+                "uiclass": "BlackTankLevel",
+                "vltgMin": "0.5",
+                "vltgMax": "1.068"
+            },
+            "meta": {
+                "manufacturer": "Winnebago",
+                "model": "",
+                "part": ""
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wh_tankpad",
+                    "instance": 3
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wp_default",
+            "instance": 1,
+            "attributes": {
+                "description": "Fresh Water Pump",
+                "name": "Water Pump",
+                "controllable": "NF",
+                "type": "FRESH"
+            },
+            "meta": {
+                "manufacturer": "SHURFLO",
+                "model": "4008-101-F65",
+                "part": "N/A"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wt_default",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wp_default",
+            "instance": 2,
+            "attributes": {
+                "description": "Show Sump Pump",
+                "name": "Show Sump",
+                "controllable": "NF",
+                "type": "GRAY"
+            },
+            "meta": {
+                "manufacturer": "SHURFLO",
+                "model": "4008-101-F65",
+                "part": "N/A"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wt_default",
+                    "instance": 2
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wh_rvc",
+            "instance": 1,
+            "attributes": {
+                "lockoutStates": [
+                    {
+                        "eventValue": 4006,
+                        "triggerValue": true
+                    }
+                ],
+                "description": "Water Heater - RVC",
+                "name": "Water Heater",
+                "controllable": "NF"
+            },
+            "meta": {
+                "manufacturer": "TRUMA CORP (23351)",
+                "model": "36022-81",
+                "part": "000027742"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "system.lk_basic",
+                    "instance": 4006
+                }
+            ]
+        },
+        {
+            "componentTypeId": "watersystems.wh_tankpad",
+            "instance": 2,
+            "attributes": {
+                "description": "Water Tank Heating Pads",
+                "name": "Tank Heating Pads",
+                "controllable": "NF",
+                "type": "COMBO",
+                "controller": "CZONE",
+                "circuits": [
+                    9,
+                    10
+                ]
+            },
+            "meta": {
+                "manufacturer": "Therma Heat",
+                "model": "SL-ST725G-16G",
+                "part": "00167187"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wt_default",
+                    "instance": 2
+                }
+            ]
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 544,
+            "attributes": {
+                "description": "Is the park brake currently released",
+                "name": "Park Brake Applied",
+                "controllable": "NF"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "movables.so_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 580,
+            "attributes": {
+                "description": "Is the ignition on",
+                "name": "Ignition On State",
+                "controllable": "NF"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "movables.so_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 570,
+            "attributes": {
+                "description": "Might cause warnings or lockouts based on low voltage",
+                "name": "Low voltage on house battery.",
+                "controllable": "NF"
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "movables.so_basic",
+                    "instance": 1
+                },
+                {
+                    "componentTypeId": "energy.ei_rvc",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 595,
+            "attributes": {
+                "description": "The indicator if the vehicle gear is currently park or anything else, might be drive, neutral etc.",
+                "name": "Vehicle Not in Park",
+                "controllable": "NF"
+            }
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 596,
+            "attributes": {
+                "description": "System is currently applying load shedding. Generic status if anything is being shed.",
+                "name": "System in Load shedding",
+                "controllable": "NF"
+            }
+        },
+        {
+            "componentTypeId": "system.lk_timebased_dynamic",
+            "instance": 4002,
+            "attributes": {
+                "description": "Generator cannot be used currently as it is cooling down.",
+                "name": "Generator Cool Down Required",
+                "controllable": "NF",
+                "uiMsgSubtext": "Generator cool down, try again in {timer} seconds",
+                "timerUnit": "SECONDS",
+                "defaultActive": false
+            }
+        },
+        {
+            "componentTypeId": "system.lk_timebased_dynamic",
+            "instance": 4003,
+            "attributes": {
+                "description": "Generator just changed state, wait 15 seconds to change again.",
+                "name": "Generator Wait Required",
+                "controllable": "NF",
+                "uiMsgSubtext": "Generator wait period, try again in {timer} seconds",
+                "timerUnit": "SECONDS",
+                "defaultActive": false
+            }
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 601,
+            "attributes": {
+                "description": "Generator cannot be used as fuel source is empty.",
+                "name": "Fuel Source is Empty",
+                "controllable": "NF",
+                "defaultActive": false
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.ft_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 599,
+            "attributes": {
+                "description": "Generic lockout if fuel is below TBD threshold.",
+                "name": "Fuel Source is low",
+                "controllable": "NF",
+                "defaultActive": false
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "energy.ft_basic",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "system.lk_basic",
+            "instance": 4006,
+            "attributes": {
+                "description": "The User is running a manual decalcification, we should not attempt to conrtrol the water heater",
+                "name": "DeCalc status received from RCV WH",
+                "controllable": "NF",
+                "defaultActive": false
+            },
+            "relatedComponents": [
+                {
+                    "componentTypeId": "watersystems.wh_rvc",
+                    "instance": 1
+                }
+            ]
+        },
+        {
+            "componentTypeId": "vehicle.ch_location_basic",
+            "instance": 2,
+            "attributes": {
+                "description": "Vehicle location and settings",
+                "name": "Vehicle Location",
+                "controllable": "NF"
+            },
+            "relatedComponents": []
+        },
+        {
+            "componentTypeId": "energy.ls_XM524",
+            "instance": 0,
+            "attributes": {
+                "description": "Load Shedding Virtual Component for 524 series",
+                "name": "Load Shedding",
+                "controllable": "NF",
+                "sheddableDevices": "ac1, "
+            },
+            "relatedComponents": []
+        },
+        {
+            "componentTypeId": "features.dx_TEST_FACILITY",
+            "instance": 1,
+            "attributes": {
+                "name": "Remote Testing Facilitator",
+                "description": "Allows remote tests to be performed",
+                "type": "REMOTE_TEST"
+            }
+        },
+        {
+            "componentTypeId": "features.dx_CAN",
+            "instance": 2,
+            "attributes": {
+                "name": "CAN Diagnostics",
+                "description": "Provides access to CAN diagnostics",
+                "type": "CAN_INVENTORY"
+            }
+        },
+        {
+            "componentTypeId": "features.dx_SYSTEM_OVERVIEW",
+            "instance": 3,
+            "attributes": {
+                "name": "System Overview",
+                "description": "Provides access to the current load and uptime of the system.",
+                "type": "SYSTEM_OVERVIEW"
+            }
+        },
+        {
+            "componentTypeId": "features.pm_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Pet Monitoring Feature Virtual Component",
+                "name": "Pet Monitoring",
+                "controllable": "NF",
+                "type": "basic"
+            }
+        },
+        {
+            "componentTypeId": "features.wx_basic",
+            "instance": 1,
+            "attributes": {
+                "description": "Weather Alerts - Settings Virtual Component",
+                "name": "Weather Alerts",
+                "controllable": "NF",
+                "type": "basic",
+                "minTravelDistanceMiles": 60
+            }
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+.switch {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  width: 52px;
+  padding-left: 33px;
+  margin: 0;
+  border-radius: 30px;
+  background: radial-gradient(
+      circle 14px,
+      white 100%,
+      transparent calc(100% + 1px)
+    )
+    #ccc -10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.switch::before {
+  content: "";
+  font: bold 12px/32px Verdana;
+  color: white;
+  text-shadow: 0 1px black;
+}
+
+:checked {
+  padding-left: 8px;
+  background-color: var(--switch-active);
+  background-position: 10px;
+}
+
+:checked::before {
+  content: "";
+}

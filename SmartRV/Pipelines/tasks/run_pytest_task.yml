@@ -1,0 +1,15 @@
+parameters:
+  testFolder: ""
+
+steps:
+  - script: |
+      # python -m pip install -U pip
+      pip install poetry
+      # poetry add pytest
+      # poetry add pytest-azurepipelines
+      poetry add pytest-cov
+      poetry install
+      PYTHONPATH=/home/vsts/work/1/WinnConnect/SmartRV/ poetry run python -m pytest --nunit-xml=../test-results.xml --cov --cov-report xml
+    workingDirectory: ${{ parameters.testFolder }}
+    displayName: Run PyTest
+    # continueOnError: true

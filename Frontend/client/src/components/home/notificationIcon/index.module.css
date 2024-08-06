@@ -1,0 +1,10 @@
+.warning path {
+  fill: yellow;
+}
+.info path {
+  fill: blue;
+}
+
+.critical path {
+  fill: red;
+}

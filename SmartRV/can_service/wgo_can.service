@@ -1,0 +1,24 @@
+[Unit]
+Description=WGO CAN Application Service
+Documentation=https://dev.azure.com/WGO-Web-Development/SmartRV/_git/SmartRV?path=/can_service/README.md
+BindsTo=sys-subsystem-net-devices-can0.device
+After=sys-subsystem-net-devices-can0.device storage.mount
+
+[Service]
+EnvironmentFile=/etc/default/smartrv
+WorkingDirectory=/opt/smartrv/can_service
+ExecStart=python3 wgo_can_service.py
+
+TimeoutSec=10
+Type=simple
+Restart=on-abnormal
+RestartSec=5
+
+StandardOutput=null
+StandardError=null
+SyslogIdentifier=can
+
+User=winnebago
+
+[Install]
+WantedBy=multi-user.target sys-subsystem-net-devices-can0.device

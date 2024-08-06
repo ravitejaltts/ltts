@@ -1,0 +1,458 @@
+[
+    {
+        "name": "OFF",
+        "value": 0
+    },
+    {
+        "name": "ON",
+        "value": 1
+    },
+    {
+        "name": "DATA_INVALID",
+        "value": 10
+    },
+    {
+        "name": "NOT_AVAILABLE",
+        "value": 11
+    },
+    {
+        "name": "NOT_APPLICABLE",
+        "value": 12
+    },
+    {
+        "name": "RESERVED",
+        "value": 13
+    },
+    {
+        "name": "PERCENT",
+        "value": 20
+    },
+    {
+        "name": "CELSIUS",
+        "value": 21
+    },
+    {
+        "name": "FAHRENHEIT",
+        "value": 22
+    },
+    {
+        "name": "KELVIN",
+        "value": 23
+    },
+    {
+        "name": "GALLONS",
+        "value": 24
+    },
+    {
+        "name": "LITERS",
+        "value": 25
+    },
+    {
+        "name": "AMPERE",
+        "value": 26
+    },
+    {
+        "name": "VOLT",
+        "value": 27
+    },
+    {
+        "name": "AMP_HOURS",
+        "value": 28
+    },
+    {
+        "name": "MINUTES",
+        "value": 30
+    },
+    {
+        "name": "SECONDS",
+        "value": 31
+    },
+    {
+        "name": "HOURS",
+        "value": 32
+    },
+    {
+        "name": "DAYS",
+        "value": 33
+    },
+    {
+        "name": "WEEKS",
+        "value": 34
+    },
+    {
+        "name": "YEARS",
+        "value": 35
+    },
+    {
+        "name": "DEGREES",
+        "value": 36
+    },
+    {
+        "name": "AUTOMATIC",
+        "value": 50
+    },
+    {
+        "name": "MANUAL",
+        "value": 51
+    },
+    {
+        "name": "HIGH",
+        "value": 52
+    },
+    {
+        "name": "LOW",
+        "value": 53
+    },
+    {
+        "name": "LEVEL",
+        "value": 54
+    },
+    {
+        "name": "FULL",
+        "value": 55
+    },
+    {
+        "name": "EMPTY",
+        "value": 56
+    },
+    {
+        "name": "INT",
+        "value": 57
+    },
+    {
+        "name": "BOOL",
+        "value": 100
+    },
+    {
+        "name": "STRING",
+        "value": 101
+    },
+    {
+        "name": "FLOAT",
+        "value": 102
+    },
+    {
+        "name": "MAP_DICT",
+        "value": 103
+    },
+    {
+        "name": "ARRAY",
+        "value": 104
+    },
+    {
+        "name": "COMBUSTION",
+        "value": 105
+    },
+    {
+        "name": "MEDIUM",
+        "value": 106
+    },
+    {
+        "name": "ELECTRIC",
+        "value": 500
+    },
+    {
+        "name": "GAS_ELECTRIC",
+        "value": 501
+    },
+    {
+        "name": "TEST_COMBUSTION",
+        "value": 502
+    },
+    {
+        "name": "TEST_ELECTRIC",
+        "value": 503
+    },
+    {
+        "name": "AC_PASSTHROUGH",
+        "value": 504
+    },
+    {
+        "name": "APS_ONLY",
+        "value": 505
+    },
+    {
+        "name": "LOAD_SENSE",
+        "value": 506
+    },
+    {
+        "name": "WAITING_TO_INVERT",
+        "value": 507
+    },
+    {
+        "name": "NOT_CHARGING",
+        "value": 508
+    },
+    {
+        "name": "BULK",
+        "value": 509
+    },
+    {
+        "name": "ABSORPTION",
+        "value": 510
+    },
+    {
+        "name": "OVERCHARGE",
+        "value": 511
+    },
+    {
+        "name": "EQUALIZE",
+        "value": 512
+    },
+    {
+        "name": "CONSTANT_VOLTAGE_CURRENT",
+        "value": 513
+    },
+    {
+        "name": "SHORE",
+        "value": 515
+    },
+    {
+        "name": "PROPOWER",
+        "value": 516
+    },
+    {
+        "name": "COOL",
+        "value": 517
+    },
+    {
+        "name": "HEAT",
+        "value": 518
+    },
+    {
+        "name": "AUTO",
+        "value": 519
+    },
+    {
+        "name": "FAN_ONLY",
+        "value": 520
+    },
+    {
+        "name": "AUX_HEAT",
+        "value": 521
+    },
+    {
+        "name": "WINDOW_DEFROST_DEHUMIDIFY",
+        "value": 522
+    },
+    {
+        "name": "TIME_TO_EMPTY",
+        "value": 523
+    },
+    {
+        "name": "TIME_TO_FULL",
+        "value": 524
+    },
+    {
+        "name": "OPENED",
+        "value": 525
+    },
+    {
+        "name": "CLOSED",
+        "value": 526
+    },
+    {
+        "name": "OPEN",
+        "value": 527
+    },
+    {
+        "name": "FAN_OUT",
+        "value": 529
+    },
+    {
+        "name": "FAN_IN",
+        "value": 530
+    },
+    {
+        "name": "NO_RAIN_DETECTED",
+        "value": 531
+    },
+    {
+        "name": "RAIN_DETECTED",
+        "value": 532
+    },
+    {
+        "name": "SENSOR_ERROR",
+        "value": 533
+    },
+    {
+        "name": "RAIN_SENSOR_NOT_INSTALLED",
+        "value": 534
+    },
+    {
+        "name": "NO_CONNECTION",
+        "value": 535
+    },
+    {
+        "name": "CHARGING",
+        "value": 536
+    },
+    {
+        "name": "RUN",
+        "value": 537
+    },
+    {
+        "name": "START",
+        "value": 538
+    },
+    {
+        "name": "PARK",
+        "value": 539
+    },
+    {
+        "name": "NEUTRAL",
+        "value": 540
+    },
+    {
+        "name": "REVERSE",
+        "value": 541
+    },
+    {
+        "name": "DRIVE",
+        "value": 542
+    },
+    {
+        "name": "PARK_BRAKE_RELEASED",
+        "value": 543
+    },
+    {
+        "name": "PARK_BRAKE_APPLIED",
+        "value": 544
+    },
+    {
+        "name": "FRONT_ON",
+        "value": 545
+    },
+    {
+        "name": "FRONT_REAR_ON",
+        "value": 546
+    },
+    {
+        "name": "FRONT_LEFT",
+        "value": 547
+    },
+    {
+        "name": "FRONT_RIGHT",
+        "value": 548
+    },
+    {
+        "name": "REAR_LEFT",
+        "value": 549
+    },
+    {
+        "name": "REAR_RIGHT",
+        "value": 550
+    },
+    {
+        "name": "LEVEL_1",
+        "value": 551
+    },
+    {
+        "name": "LEVEL_2",
+        "value": 553
+    },
+    {
+        "name": "LEVEL_3_DC",
+        "value": 554
+    },
+    {
+        "name": "LOW_POWER_MODE",
+        "value": 555
+    },
+    {
+        "name": "FAULT",
+        "value": 556
+    },
+    {
+        "name": "STORAGE",
+        "value": 557
+    },
+    {
+        "name": "PASS_THRU",
+        "value": 558
+    },
+    {
+        "name": "INVERTING",
+        "value": 559
+    },
+    {
+        "name": "ASSISTING",
+        "value": 560
+    },
+    {
+        "name": "ECO",
+        "value": 561
+    },
+    {
+        "name": "COMFORT",
+        "value": 562
+    },
+    {
+        "name": "HALF",
+        "value": 563
+    },
+    {
+        "name": "RETRACTED",
+        "value": 564
+    },
+    {
+        "name": "EXTENDED",
+        "value": 565
+    },
+    {
+        "name": "LEVELING",
+        "value": 566
+    },
+    {
+        "name": "RETRACTING",
+        "value": 567
+    },
+    {
+        "name": "STANDBY",
+        "value": 568
+    },
+    {
+        "name": "CIRCUIT_INVERTER",
+        "value": 5000
+    },
+    {
+        "name": "CIRCUIT_WATERPUMP",
+        "value": 5001
+    },
+    {
+        "name": "CIRCUIT_WATERHEATER",
+        "value": 5002
+    },
+    {
+        "name": "LEVEL_TANK",
+        "value": 5003
+    },
+    {
+        "name": "LEVEL_BATTERY",
+        "value": 5004
+    },
+    {
+        "name": "ACTIVITY_IDLE",
+        "value": 6000
+    },
+    {
+        "name": "ACTIVITY_SLEEP",
+        "value": 6001
+    },
+    {
+        "name": "ACTIVITY_WAKE",
+        "value": 6002
+    },
+    {
+        "name": "MAIN_SERVICE",
+        "value": 8001
+    },
+    {
+        "name": "CAN_SERVICE",
+        "value": 8002
+    },
+    {
+        "name": "IOT_SERVICE",
+        "value": 8003
+    }
+]

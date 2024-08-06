@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header p {
+  color: var(--text-deemphasized);
+  font-weight: bold;
+  letter-spacing: 1.44px;
+}
+.slider {
+  margin: 20px 10px;
+}
+.slider :global(.rc-slider-handle) {
+  width: 30px;
+  height: 30px;
+  margin-top: -13px;
+  opacity: 1;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+  border: none !important;
+}
+.slider :global(.rc-slider-dot-active) {
+  background-color: #4c85a9 !important;
+}
+.slider :global(.rc-slider-dot) {
+  height: 20px;
+  width: 6px;
+  border-radius: 0;
+  border: none;
+  transform: translateY(30%) !important;
+  background-color: #e5e5ea;
+}
+.numContainer {
+  width: 101%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: var(--text-deemphasized);
+}

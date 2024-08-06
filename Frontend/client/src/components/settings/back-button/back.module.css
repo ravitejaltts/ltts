@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 24px;
+  color: var(--text-main);
+}
+.container path {
+  fill: var(--text-main);
+}

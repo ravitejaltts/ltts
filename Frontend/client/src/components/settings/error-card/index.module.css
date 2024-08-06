@@ -1,0 +1,31 @@
+.container {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 8px 16px 15px 20px;
+}
+p {
+  margin: 4px 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topText {
+  font-size: 15px;
+  color: #8e8e93;
+}
+.title {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+.timeStamp {
+  font-size: 18px;
+  color: var(--text-deemphasized);
+}
+.body {
+  font-size: 18px;
+
+  color: var(--text-main);
+}

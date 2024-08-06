@@ -1,0 +1,19 @@
+VERSION "1.0"
+
+
+CM_ "Lippert, for the Lippert slide out module.
+Author: Damiano Liviero
+for Winnebago Industries Inc.
+";
+
+
+BO_ 807 Prop_Slideout_Status: 6  Vector__XXX
+    SG_ Motion:
+        0|8@1+  (1,0)   [0|255] ""    Vector__XXX
+
+VAL_ 807 Motion
+    192 "No Motion"
+    194 "Retracting"
+    195 "Extending"
+    224 "Assumed Invalid"
+    255 "Data Invalid";

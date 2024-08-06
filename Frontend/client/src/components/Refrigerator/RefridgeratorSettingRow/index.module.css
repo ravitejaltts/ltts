@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 15px;
+}
+
+.row span {
+  color: var(--text-main);
+  font-size: 20px;
+  flex: 1;
+}
+
+.borderBottom {
+  border-bottom: 1px solid var(--fills-background);
+  margin: 0 0 0 20px;
+}
+
+.settingArrow path {
+  fill: var(--text-main);
+}
+
+.selectedArrow path {
+  fill: var(--text-main);
+}
+
+.rightText {
+  color: lightgray;
+  font-size: 18px;
+  margin: 0;
+}

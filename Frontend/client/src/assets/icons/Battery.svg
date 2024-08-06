@@ -1,0 +1,8 @@
+<svg width="40" height="23" viewBox="0 0 40 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="c07uxdkmna" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="23" fill="#000">
+        <path fill="#fff" d="M0 0h40v23H0z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2a2 2 0 0 0-2 2v14.794a2 2 0 0 0 2 2h30.63a2 2 0 0 0 2-2v-5.026A1.467 1.467 0 0 0 38 12.304V10.49c0-.777-.605-1.414-1.37-1.464V4a2 2 0 0 0-2-2H4z"/>
+    </mask>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2a2 2 0 0 0-2 2v14.794a2 2 0 0 0 2 2h30.63a2 2 0 0 0 2-2v-5.026A1.467 1.467 0 0 0 38 12.304V10.49c0-.777-.605-1.414-1.37-1.464V4a2 2 0 0 0-2-2H4z" fill="#2A2A2A"/>
+    <path d="m36.63 13.768-.131-1.995-1.869.123v1.872h2zm0-4.743h-2v1.873l1.869.123.131-1.996zM4 4V0a4 4 0 0 0-4 4h4zm0 14.794V4H0v14.794h4zm0 0H0a4 4 0 0 0 4 4v-4zm30.63 0H4v4h30.63v-4zm0 0v4a4 4 0 0 0 4-4h-4zm0-5.026v5.026h4v-5.026h-4zM36 12.304c0-.283.22-.513.499-.531l.263 3.991A3.468 3.468 0 0 0 40 12.304h-4zm0-1.815v1.815h4V10.49h-4zm.499.532a.533.533 0 0 1-.5-.532h4a3.467 3.467 0 0 0-3.237-3.46l-.263 3.992zM34.63 4v5.025h4V4h-4zm0 0h4a4 4 0 0 0-4-4v4zM4 4h30.63V0H4v4z" fill="#6E6E6E" mask="url(#c07uxdkmna)"/>
+</svg>

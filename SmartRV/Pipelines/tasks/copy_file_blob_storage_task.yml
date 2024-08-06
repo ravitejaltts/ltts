@@ -1,0 +1,16 @@
+parameters:
+  displayName: 'Copy file to Blob Storage'
+  sourceFile: ''
+  azureSubscription: ''
+  storageAccount: ''
+  containerName: ''
+  destinationPath: ''
+  overwrite: false
+steps:
+- task: AzureCLI@2
+  displayName: ${{ parameters.displayName }}
+  inputs:
+    azureSubscription: '${{parameters.azureSubscription}}'
+    scriptType: 'pscore'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az storage blob upload -f ${{ parameters.sourceFile }} --account-name ${{ parameters.storageAccount }} --container-name ${{ parameters.containerName }} --name drop/${{ parameters.destinationPath}} --overwrite ${{ parameters.overwrite }} --auth-mode login'

@@ -1,0 +1,128 @@
+.mainContainer {
+  background-color: var(--fills-background);
+  height: 100vh;
+  color: var(--textColor1);
+  box-sizing: border-box;
+  display: flex;
+}
+
+.backContainer {
+  background-color: var(--fills-surface-5);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.backNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backText {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.backNav svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.leftDiv {
+  height: 100%;
+  background-color: var(--app-screen-left-bg);
+  width: 38%;
+  max-width: 357px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.rightDiv {
+  flex: 1;
+  padding: 20px;
+  border-radius: 16px;
+  width: 62%;
+  display: inline-block;
+  margin-left: 8px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.leftDivTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.waterContainer {
+  background-color: #0ca9da;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  box-sizing: border-box;
+}
+
+.settingsContainer {
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: var(--app-setting-background);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingsContainer svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.waterHeadingText {
+  font-size: 44px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--mode-text);
+  margin-top: 24px;
+}
+
+.btnDiv {
+  background-color: var(--mode-bg-1);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.btnDiv button {
+  font-size: 16px;
+  padding: 16px;
+}
+
+.settingArrow path {
+  fill: var(--arrow);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.rightKeyboardDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}

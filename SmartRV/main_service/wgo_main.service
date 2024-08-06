@@ -1,0 +1,22 @@
+[Unit]
+Description=WGO MAIN SERVICE
+Documentation=https://dev.azure.com/WGO-Web-Development/SmartRV/_git/SmartRV?path=/ui_service/README.md
+After=storage.mount
+[Service]
+EnvironmentFile=/etc/default/smartrv
+WorkingDirectory=/opt/smartrv/main_service/
+ExecStart=python3 wgo_main_service.py ${WGO_MAIN_PORT}
+
+TimeoutSec=60
+Type=simple
+Restart=on-abnormal
+RestartSec=5
+
+StandardOutput=null
+StandardError=null
+SyslogIdentifier=main
+# TODO: Fix ability to reboot system or move to another service ?
+User=winnebago
+
+[Install]
+WantedBy=multi-user.target

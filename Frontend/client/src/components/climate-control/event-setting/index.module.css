@@ -1,0 +1,118 @@
+.container{
+    margin:30px 15px;
+}
+.title{
+  font-size: 18px;
+  font-weight: bold;
+}
+.timer{
+
+}
+.timeBtn{
+    padding: 16px 40px;
+    border-radius: 40px;
+    color:var(--textInverted)
+}
+
+.clearBtn{
+    padding: 10px 40px;
+    border-radius: 40px;
+    border:none;
+    background-color: var(--mode-white);
+    width: 100%;
+    font-size: 19px;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+/* temperature */
+.tempBox{
+    padding: 16px 24px 32px;
+    border-radius: 8px;
+   background-color: var(--mode-white);
+}
+.heading{
+    font-size: 18px;
+    margin-bottom:30px;
+}
+
+.thermoContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .minusContainer, .plusContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2.4px 9.5px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .heatContainer, .coolContainer {
+    height: 50px;
+    background-color: var(--textInverted);
+    width: 100px;
+    border-radius: 8px;
+    margin: 0 10px;
+    padding: 15px;
+    font-size: 44px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    /* transition: all 2s ease-in-out; */
+  }
+  
+  .orangeText {
+    color: #f15f31;
+  }
+  
+  .orangeBorder {
+    border: 1px solid #f15f31;
+  }
+  .blueText {
+    color: #0ca9da;
+  }
+  
+  .blueBorder {
+    border: 1px solid #0ca9da;
+  }
+  
+  .offText {
+    color: #8e8e93;
+    opacity: 90%;
+  }
+  .fText {
+    font-size: 96px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+    display: flex;
+  }
+  
+  .tempText {
+    font-size: 44px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+  }
+  
+  .fSmallText {
+    font-size: 24px;
+    color: var(--text-deemphasized);
+    align-self: center;
+  }
+  
+  .currentText {
+    margin: 0 0 20px 0;
+    color: var(--text-deemphasized);
+    
+  }
+  

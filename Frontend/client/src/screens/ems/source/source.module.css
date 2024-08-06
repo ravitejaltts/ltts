@@ -1,0 +1,145 @@
+.sourceContainer {
+  background-color: var(--fills-background);
+  height: 100vh;
+  padding: 13px 40px;
+  color: var(--textColor1);
+  box-sizing: border-box;
+}
+
+.backNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.backText {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.energyText {
+  font-size: 24px;
+  margin: 0 0 0 250px;
+}
+
+.backNav svg path {
+  fill: var(--textColor1);
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  margin: 1px 12px 0 0;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--bg-fade);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.iconBox svg path {
+  fill: var(--textColor1);
+}
+
+/* 1st row container */
+
+.solarContainer {
+  background-color: var(--fills-surface-2);
+  margin: 1px 32px 8px;
+  padding: 13px 24px;
+  border-radius: 19.4px;
+  box-sizing: border-box;
+}
+
+.solarRow {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.solarCardsContainer {
+  display: flex;
+  gap: 15px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+/* 2nd hookup */
+
+.hookupContainer {
+  background-color: var(--fills-surface-2);
+  margin: 1px 32px 8px;
+  padding: 13px 24px;
+  border-radius: 19.4px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+
+}
+
+.topText {
+font-size: 30px;
+
+}
+
+.bottomText {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-deemphasized);
+}
+
+.notChargingText {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-deemphasized);
+}
+
+/* 3rd propulsion */
+
+.propulsionContainer {
+  background-color: var(--fills-surface-2);
+  margin: 1px 32px 8px;
+  padding: 13px 24px;
+  border-radius: 19.4px;
+  box-sizing: border-box;
+}
+
+/* solar card start */
+
+.solarCard {
+  background-color: var(--bg-fade);
+  padding: 12px;
+  border-radius: 16px;
+  width: 155px;
+  height: 120px;
+  box-sizing: border-box;
+}
+ .solarTopText {
+font-size: 19px;
+margin: 0;
+ }
+ .solarMiddleText {
+margin: 10px 0 0 0;
+font-size: 44px;
+
+ }
+ .solarBottomText {
+margin: 0;
+font-size: 18px;
+  color: var(--text-deemphasized);
+ }
+/* solar card end */

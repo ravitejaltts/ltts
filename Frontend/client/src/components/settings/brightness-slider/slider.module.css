@@ -1,0 +1,49 @@
+.sliderContainer {
+  padding: 15px;
+  gap: 20px;
+}
+
+/* will delete in future temp */
+
+.sliderContainerTemp {
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.sliderContainer svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.borderBottom {
+  border-bottom: 1px solid var(--fills-background);
+  margin: 0 20px;
+}
+.slider {
+  flex: 1;
+}
+.brightnessIcon1 {
+  scale: 0.9;
+}
+.brightnessIcon2 {
+  scale: 1.1;
+}
+.slider :global(.rc-slider) {
+  height: 10px;
+  padding: 0px;
+}
+.slider :global(.rc-slider-rail) {
+  height: 10px;
+}
+.slider :global(.rc-slider-track) {
+  height: 10px;
+}
+
+.slider :global(.rc-slider-handle) {
+  width: 30px;
+  height: 30px;
+  margin-top: -13px;
+  opacity: 1;
+  background-color: var(--ui-elements-icon-fill-2);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+  border: none !important;
+}

@@ -1,0 +1,74 @@
+.leftBottomContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.leftBottomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--ui-elements-border2);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.topText {
+  font-family: Roboto;
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: #0daadb;
+}
+
+.fText {
+  font-size: 96px;
+  font-weight: bold;
+  margin: 15px 0 0 0;
+  display: flex;
+}
+
+.fSmallText {
+  font-size: 24px;
+  color: var(--text-deemphasized);
+  align-self: center;
+  margin: 7px 0px;
+}
+
+.currentText {
+  font-family: Roboto;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  text-align: center;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.rangeText {
+  font-family: Roboto;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.insideText {
+  color: #55b966;
+}
+
+.outsideText {
+  color: #ff9a22;
+}
+
+@media screen and (max-width: 1024px) {
+  .leftBottomDiv {
+    padding: 12px;
+  }
+  .fText {
+    font-size: 50px;
+  }
+}

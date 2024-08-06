@@ -1,0 +1,15 @@
+parameters:
+  workingDirectory: ""
+
+steps:
+  - script: |
+      pip install poetry
+      cd main_service
+      poetry install
+      cd components
+      poetry run python generate_templates.py
+
+    env:
+      PYTHONPATH: ${{ parameters.workingDirectory }}
+    workingDirectory: ${{ parameters.workingDirectory }}
+    displayName: Run Component Generation

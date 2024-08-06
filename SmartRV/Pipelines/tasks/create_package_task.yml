@@ -1,0 +1,20 @@
+parameters:
+  packageFolder: ''
+  packageName: ''
+  packageVersion: ''
+  destinationFolder: ''
+  gpgPassphrase: 'Winnconnect2023'
+
+steps:
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: ${{ parameters.packageFolder }}
+    archiveType: 'tar'
+    tarCompression: 'gz'
+    archiveFile: '${{ parameters.destinationFolder }}/${{ parameters.packageName }}-${{ parameters.packageVersion }}.tar.gz'
+    displayName: archive ${{ parameters.packageName }}
+- script: |
+    gpg -c --yes --pinentry-mode loopback --passphrase=${{ parameters.gpgPassphrase }} ${{ parameters.packageName }}-${{ parameters.packageVersion }}.tar.gz
+    rm ${{ parameters.packageName }}-${{ parameters.packageVersion }}.tar.gz
+  workingDirectory: ${{ parameters.destinationFolder }}
+  displayName: encrypt ${{ parameters.packageName }}

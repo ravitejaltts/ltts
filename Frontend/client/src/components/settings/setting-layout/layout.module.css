@@ -1,0 +1,23 @@
+.settingsContainer {
+  display: flex;
+  color: var(--mode-text);
+  height: 100vh;
+  /* position: relative; */
+}
+
+.left {
+  width: 292px;
+  background-color: var(--setting-sidebar);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.right {
+  flex: 1;
+  background-color: var(--fills-background);
+  height: 100vh;
+  overflow: scroll;
+  box-sizing: border-box;
+  padding-bottom: 24px;
+}

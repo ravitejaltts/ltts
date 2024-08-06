@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "system_service"
+version = "0.1.0"
+description = "WGO System Service. Provides watchdog and system maintenance capabilities"
+authors = ["Dominique Parolin <dominiqueparolin@winnebagoind.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+fastapi = "^0.75.0"
+azure-iot-device = "^2.10.0"
+uvicorn = "^0.17.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

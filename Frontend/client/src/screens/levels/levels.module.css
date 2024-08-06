@@ -1,0 +1,6 @@
+.levels {
+  width: 100vw;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px 30px;
+}

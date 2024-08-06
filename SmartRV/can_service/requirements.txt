@@ -1,0 +1,5 @@
+bitstring
+requests
+fastapi
+cantools
+setproctitle

@@ -1,0 +1,229 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: var(--mode-bg-1);
+  color: var(--mode-text);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header svg {
+  height: 32px;
+  width: 32px;
+}
+.header svg path {
+  fill: var(--text-deemphasized);
+}
+.header span {
+  font-size: 24px;
+  color: var(--text-deemphasized);
+}
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  margin: 0px 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.left {
+  width: 50%;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.msgHeader {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--brand-winnebago-red);
+  text-transform: uppercase;
+}
+
+.msgHeader2 {
+  font-size: 44px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.instruction {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+}
+.number {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--brand-winnebago-red);
+}
+.description {
+  font-size: 19px;
+  font-weight: bold;
+}
+.qr {
+}
+.qrHelper {
+  color: var(--text-deemphasized);
+  text-align: center;
+  margin: 0% 10%;
+}
+.vNumber {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.progressContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.progressMsg1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.progressMsg2 {
+  font-size: 24px;
+  color: var(--text-deemphasized);
+}
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 60px;
+}
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 16px;
+}
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn1 {
+  width: 280px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--mode-text);
+  border: none;
+  background-color: var(--mode-text-inverse);
+  border: solid 1px var(--mode-text);
+}
+.btn2,
+.btn3 {
+  width: 280px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--mode-text-inverse);
+  border: 1px solid var(--mode-text-inverse);
+  background-color: var(--mode-text);
+}
+.btn3 {
+  margin-top: 60px;
+}
+.imageContainer {
+  position: relative;
+}
+.rvImage {
+  position: relative;
+  z-index: 10;
+}
+.bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #dbe7ee;
+  z-index: 3;
+
+  /* animation: bubbleUp 2s ease-out 0.5s infinite; */
+}
+.bubble2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #f2f6f9;
+  z-index: 2;
+  /* animation: bubbleUp 2s ease infinite; */
+}
+@keyframes bubbleUp {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+  100% {
+    height: 150%;
+    aspect-ratio: 1;
+  }
+}
+@media screen and (width<=1024px) {
+  .left {
+    width: 60%;
+  }
+  .instruction {
+    margin-top: 20px;
+  }
+}

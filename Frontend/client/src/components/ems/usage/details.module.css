@@ -1,0 +1,52 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.iconBox svg path {
+    fill: var(--textColor1);   
+}
+
+.row h2 {
+    font-size: 20px;
+  font-weight: 500;
+
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+}
+
+.whiteContainer {
+    background-color: var(--bg-fade);
+    padding: 12px 20px;
+    height: 430px;
+    overflow: scroll;
+    border-radius: 0 0 16px 16px;
+}
+
+.activeRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--text-deemphasized);
+    padding: 3px 0;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.right p {
+    color: var(--text-deemphasized);
+}

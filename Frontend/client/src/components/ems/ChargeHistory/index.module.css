@@ -1,0 +1,172 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--fills-background);
+  padding: 24px 40px;
+  box-sizing: border-box;
+}
+
+.backContainer {
+  position: absolute;
+  top: 24px;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backContainer svg path {
+  fill: var(--textColor1);
+}
+
+.backText {
+  font-family: var(--font-family);
+  font-size: 24px;
+  line-height: 0.83;
+  text-align: left;
+  color: var(--text-main);
+  margin: 0 0 0 10px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headingText {
+  font-family: var(--font-family);
+  font-size: 24px;
+  text-align: center;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.chargingDiv {
+  border-radius: 16px;
+  background-color: var(--mode-bg-1);
+  padding: 24px 32px 100px;
+}
+
+.chargingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navContainer svg path {
+  fill: var(--text-main)
+}
+
+.nextBtn svg {
+  transform: rotate(180deg);
+}
+
+.headingTextContainer {
+  text-align: center;
+}
+
+.mainHeading {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-main);
+  margin: 0 0 5px;
+}
+
+.today {
+  font-family: var(--font-family);
+  font-size: 24px;
+  color: var(--text-deemphasized);
+  margin: 0 0 8px;
+}
+
+.scales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 10px;
+  position: relative;
+  top: -20px;
+}
+
+.scales div {
+  font-family: var(--font-family);
+  font-size: 18px;
+  margin-top: 32px;
+  color: var(--text-main);
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-deemphasized)
+}
+
+.meterContainer {
+  display: flex;
+}
+
+.meterCollection {
+  display: flex;
+  align-items: flex-end;
+}
+
+.meterDivContainer {
+  width: 12px;
+  height: 129px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--mode-text-inverse);
+}
+
+.ungroupedMeter {
+  background-color: #e5e5ea !important;
+}
+
+.emptyMeter {
+  border: solid 1px #e5e5ea !important;
+  background-color: transparent !important;
+}
+
+.meterFill {
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: #55b966;
+  width: 100%;
+  height: 50%;
+}
+
+.meterWrapper {
+  padding: 11px 10px;
+  height: 161px;
+  background-color: rgba(162, 224, 172, 0.25);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 22px;
+}
+
+.simpleWrapper {
+  padding: 11px
+}
+
+.flashIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  transform: translateX(-50%);
+}

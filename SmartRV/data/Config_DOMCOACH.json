@@ -1,0 +1,1171 @@
+{
+    "floorPlan": "DOMCOACH",
+    "componentGroup": "sbox.sandbox.DOMCOACH.componentGroup",
+    "hal_options": [],
+    "climate_components": {
+        "rf1": {
+            "componentTypeId": "climate.rf_basic",
+            "instance": 1,
+            "attributes": {
+                "name": "Refrigerator ",
+                "description": "Refrigerator Temp"
+            }
+        },
+        "rf2": {
+            "componentTypeId": "climate.rf_basic",
+            "instance": 2,
+            "attributes": {
+                "name": "Freezer ",
+                "description": "Freezer Temp"
+            }
+        },
+        "he1": {
+            "componentTypeId": "climate.he_basic",
+            "instance": 1,
+            "attributes": {
+                "name": "Heater (LP Furnace)"
+            }
+        },
+        "he2": {
+            "componentTypeId": "climate.he_heatpump",
+            "instance": 2,
+            "attributes": {
+                "name": "GE AC Heatpump"
+            },
+            "filters": {
+                "optionCodes": [
+                    "29J"
+                ],
+                "relatedComponents": [
+                    "ac1"
+                ]
+            }
+        },
+        "th1": {
+            "componentTypeId": "climate.th_virtual",
+            "instance": 1,
+            "attributes": {
+                "name": "Thermostat",
+                "description": "Indoor HVAC control Thermostat"
+            }
+        },
+        "th2": {
+            "componentTypeId": "climate.th_outdoor",
+            "instance": 2,
+            "attributes": {
+                "name": "Outdoor",
+                "description": "Outdoor Thermostat"
+            }
+        }
+    },
+    "climate_defaults": {
+        "zone_1__ac_1": {
+            "onOff": 0,
+            "fanSpd": 0
+        },
+        "fan_mapping": {
+            "1": 4,
+            "2": 4,
+            "3": 3,
+            "4": 4
+        },
+        "he1": {
+            "onOff": 0
+        },
+        "initial_state": {
+            "zone_1__fan_1": {
+                "compressor": 0,
+                "fanSpd": 0
+            },
+            "zone_1__fan_2": {
+                "direction": 529,
+                "dome": 0,
+                "onOff": 0,
+                "fanSpd": 0
+            },
+            "zone_1__fan_3": {
+                "direction": 529,
+                "dome": 0,
+                "onOff": 0,
+                "fanSpd": 0
+            },
+            "he1": {
+                "onOff": 0
+            },
+            "zone_1__onOff": 1,
+            "zone_1_climate_mode": 519
+        },
+        "max_temp_set": 35.0,
+        "min_temp_set": 15.6,
+        "num_zones": 1,
+        "zone_1": {
+            "hvac_mode": 519,
+            "set_temperature": 22.8,
+            "set_temperature_AUTO": 21.1,
+            "set_temperature_COOL": 25.6,
+            "set_temperature_HEAT": 20.0
+        },
+        "climate_algo_enabled": 1
+    },
+    "energy_mapping": {
+        "generator": {
+            "operating": 0
+        },
+        "battery__1__soc": null,
+        "battery__1__soh": null,
+        "battery__1__capacity_remaining": null,
+        "battery__1__voltage": null,
+        "battery__1__current": null,
+        "battery__1__charging": null,
+        "battery__1__remaining_runtime_minutes": null,
+        "bms__1__charge_lvl": 0,
+        "bms__1__temp": null,
+        "is_charging": null,
+        "solar_active": null,
+        "charger__1__voltage": null,
+        "ei1": {
+            "onOff": null,
+            "load": null,
+            "continuous_max_load": 2000,
+            "overld": false,
+            "overload_timer": 0
+        },
+        "solar__1__input_voltage": null,
+        "solar__1__input_current": null,
+        "solar__1__input_watts": null,
+        "shore__1__lvl": null,
+        "shore__1__lock": false
+    },
+    "movable_components": {
+        "so1": {
+            "componentTypeId": "movables.so_basic",
+            "instance": 1,
+            "attributes": {
+                "name": "Bedroom",
+                "description": "Make room for the Murphy Bed"
+            }
+        },
+        "aw1": {
+            "componentTypeId": "movables.aw_rvc",
+            "instance": 1,
+            "attributes": {
+                "name": "Awning",
+                "description": "Adjustable cover for the entance side."
+            }
+        },
+        "al1": {
+            "componentTypeId": "movables.al_light_rvc",
+            "instance": 1,
+            "attributes": {
+                "name": "Awning light",
+                "description": "Adjustable cover light."
+            }
+        },
+        "lj1": {
+            "componentTypeId": "movables.lj_rvc",
+            "instance": 1,
+            "attributes": {
+                "name": "Leveling Jacks",
+                "description": "For leveling the RV."
+            }
+        }
+    },
+    "movable_mapping": {
+        "awning": {
+            "mode": 526,
+            "pctExt": null,
+            "light": {
+                "onOff": 0,
+                "brt": 75
+            },
+            "awning__1__motion": "Data Invalid",
+            "awning__1__position": "Data Invalid"
+        },
+        "jacks": {
+            "mode": 564
+        }
+    },
+    "lighting_mapping": {
+        "default_on_lighting_zones": [
+            6,
+            7,
+            10,
+            11,
+            15,
+            16
+        ],
+        "zones": [
+            {
+                "id": 1,
+                "type": "SIMPLE_DIM",
+                "name": "Zone1-R",
+                "description": "",
+                "code": "lz",
+                "channel": "R",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 2,
+                "type": "SIMPLE_DIM",
+                "name": "Bed 1 OVHD",
+                "description": "",
+                "code": "lz",
+                "channel": "G",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 3,
+                "type": "SIMPLE_DIM",
+                "name": "Bed 2 OVHD",
+                "description": "",
+                "code": "lz",
+                "channel": "B",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 1
+                }
+            },
+            {
+                "id": 4,
+                "type": "SIMPLE_DIM",
+                "name": "Bed Accent",
+                "description": "",
+                "code": "lz",
+                "channel": "W",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 5,
+                "type": "SIMPLE_DIM",
+                "name": "Zone2-Channel-R",
+                "description": "",
+                "code": "lz",
+                "channel": "R",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 6,
+                "type": "SIMPLE_DIM",
+                "name": "Service",
+                "description": "",
+                "code": "lz",
+                "channel": "G",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 1
+                }
+            },
+            {
+                "id": 7,
+                "type": "SIMPLE_DIM",
+                "name": " Porch",
+                "description": "",
+                "code": "lz",
+                "channel": "B",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 1
+                }
+            },
+            {
+                "id": 8,
+                "type": "SIMPLE_DIM",
+                "name": "Lounge",
+                "description": "",
+                "code": "lz",
+                "channel": "W",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 9,
+                "type": "SIMPLE_DIM",
+                "name": "Dining OVHD",
+                "description": "Main ceiling lights",
+                "code": "lz",
+                "channel": "R",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 10,
+                "type": "SIMPLE_DIM",
+                "name": "Galley ",
+                "description": "",
+                "code": "lz",
+                "channel": "G",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 11,
+                "type": "SIMPLE_DIM",
+                "name": "Galley OVHD",
+                "description": "",
+                "code": "lz",
+                "channel": "B",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 1
+                }
+            },
+            {
+                "id": 12,
+                "type": "SIMPLE_DIM",
+                "name": "Wardrobe",
+                "description": "",
+                "code": "lz",
+                "channel": "W",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 13,
+                "type": "SIMPLE_DIM",
+                "name": "Bath light",
+                "description": "Main ceiling lights",
+                "code": "lz",
+                "channel": "R",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 14,
+                "type": "SIMPLE_DIM",
+                "name": "Bath Accent",
+                "description": "",
+                "code": "lz",
+                "channel": "G",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 1
+                }
+            },
+            {
+                "id": 15,
+                "type": "SIMPLE_DIM",
+                "hidden": true,
+                "name": " Compartment Lights",
+                "description": "",
+                "code": "lz",
+                "channel": "B",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 1
+                }
+            },
+            {
+                "id": 16,
+                "hidden": true,
+                "type": "SIMPLE_DIM",
+                "name": "Drawer and Front OVHD",
+                "description": "",
+                "code": "lz",
+                "channel": "W",
+                "controller_type": "ITC 227X-RGBW",
+                "controller": "itc_1",
+                "state": {
+                    "_rgb": "#00000000",
+                    "brt": 100,
+                    "onOff": 0
+                }
+            },
+            {
+                "id": 17,
+                "type": "SIMPLE_DIM",
+                "name": "Awning",
+                "description": "Awning light associated with Awning instance 1",
+                "code": "lz",
+                "channel": 1,
+                "controller_type": "RVC",
+                "controller": "CAN",
+                "state": {
+                    "brt": 100,
+                    "onOff": 0
+                }
+            }
+        ]
+    },
+    "energy_components": {
+        "bm1": {
+            "componentTypeId": "energy.bm_basic",
+            "instance": 1,
+            "attributes": {
+                "name": "Battery Management",
+                "description": "Status for the Battery"
+            }
+        }
+    },
+    "features_components": {
+        "pm1": {
+            "componentTypeId": "features.pm_basic",
+            "instance": 1,
+            "attributes": {
+                "name": "Pet Minder",
+                "description": "Petminder State Reporting"
+            }
+        }
+    },
+    "communication_components": {
+        "ce1": {
+            "componentTypeId": "communication.ce_cradlepoint",
+            "instance": 1,
+            "attributes": {
+                "name": "Network Router",
+                "description": "Router State Reporting"
+            }
+        }
+    },
+    "electrical_mapping": {
+        "ac": {},
+        "dc": {
+            "5": {
+                "description": "Controls power to the Theater Seat",
+                "id": 5,
+                "long": "C6.5-7 Theater Seat",
+                "rvOutputId": 5,
+                "short": "TheaterSeat",
+                "category": "electrical"
+            },
+            "6": {
+                "description": "Controls power to ITC lighting controller 1 20DC",
+                "id": 6,
+                "long": "C6.1-4 Lighting controller 1 (Z1 - Z16)",
+                "rvOutputId": 1,
+                "short": "LightController",
+                "category": "electrical"
+            },
+            "7": {
+                "description": "Door Lock/Unlock",
+                "id": 7,
+                "long": "C2.9/1 Door Lock/Unlock",
+                "rvOutputId": 161,
+                "short": "DoorLockUnlock",
+                "category": "vehicle",
+                "circuitType": "H-BRIDGE",
+                "widget": "deadman",
+                "backText": "Unlock",
+                "forwardText": "Lock"
+            },
+            "8": {
+                "description": "Provides power to the furnace.",
+                "id": 8,
+                "long": "C13.4 Furnace",
+                "rvOutputId": 130,
+                "short": "Furnace",
+                "category": "climate"
+            },
+            "9": {
+                "description": "Provides power to the grey tank heater",
+                "id": 9,
+                "long": "C13.2 Grey Water Tank Heater",
+                "rvOutputId": 104,
+                "short": "GreyTankHeater",
+                "category": "watersystems"
+            },
+            "10": {
+                "description": "Provides power to the black water tank heater.",
+                "id": 10,
+                "long": "C13.3 Black Water tank heater.",
+                "rvOutputId": 129,
+                "short": "BlackTankHeater",
+                "category": "watersystems"
+            },
+            "11": {
+                "description": "Turns power to Water Pump on/off",
+                "id": 11,
+                "long": "C13.1 Water Pump Power on/off",
+                "rvOutputId": 103,
+                "short": "Water Pump",
+                "category": "watersystems",
+                "code": "wp",
+                "instance": 1
+            },
+            "12": {
+                "description": "Provides power to the RooFFan.",
+                "id": 12,
+                "long": "C13.5 Power to both Roof Fans",
+                "rvOutputId": 131,
+                "short": "RooFFan",
+                "category": "climate"
+            },
+            "13": {
+                "description": "H - Bridge 01 Provides power to the Murphy Bed",
+                "id": 13,
+                "long": "Power to the Murphy Bed",
+                "rvOutputId": 165,
+                "short": "MurphyBed",
+                "category": "movables",
+                "circuitType": "H-BRIDGE",
+                "widget": "deadman",
+                "backText": "Down",
+                "forwardText": "Up"
+            },
+            "14": {
+                "description": "Provides Power to Water Heater",
+                "id": 14,
+                "long": "C6.8-10 Water Heater",
+                "rvOutputId": 14,
+                "short": "WaterHeater",
+                "category": "watersystems",
+                "code": "wh",
+                "instance": 1
+            },
+            "15": {
+                "description": "Controls Furnace Trigger, that allows burn off cycle to conclude",
+                "id": 15,
+                "long": "C12.1 Furnace Trigger",
+                "rvOutputId": 15,
+                "short": "FurnaceTrigger",
+                "category": "climate"
+            },
+            "16": {
+                "description": "Sets General Power JJT",
+                "id": 16,
+                "long": "Gen Power JJT",
+                "rvOutputId": 65,
+                "short": "GenPowerJJT",
+                "category": "electrical"
+            },
+            "17": {
+                "description": "Sets Refrigerator Power",
+                "id": 17,
+                "long": "Refrigerator Power",
+                "rvOutputId": 8,
+                "short": "Refrigerator",
+                "category": "electrical"
+            },
+            "18": {
+                "description": "Run Slideout Retract",
+                "id": 18,
+                "long": "C12.7 Run Slideout Retract",
+                "bank": 96,
+                "output_id": 4,
+                "rvOutputId": 100,
+                "short": "SlideoutRetract",
+                "category": "movables",
+                "widget": "button",
+                "code": "so",
+                "instance": 1
+            },
+            "19": {
+                "description": "Sets General Power JE",
+                "id": 19,
+                "long": "General Power JE",
+                "rvOutputId": 35,
+                "short": "GenPowerJE",
+                "category": "electrical"
+            },
+            "20": {
+                "description": "Run Slideout Extend",
+                "id": 20,
+                "long": "C12.8 Run Slideout Extend",
+                "bank": 96,
+                "output_id": 3,
+                "rvOutputId": 99,
+                "short": "SlideoutExtend",
+                "category": "movables",
+                "widget": "button",
+                "code": "so",
+                "instance": 1
+            },
+            "22": {
+                "description": "HMI - Display",
+                "id": 22,
+                "long": "HMI - Display",
+                "rvOutputId": 68,
+                "short": "HMIPower",
+                "category": "electrical"
+            },
+            "23": {
+                "description": "Microwave Load Shed Relay",
+                "id": 23,
+                "long": "C12.4 Microwave Load Shed Relay",
+                "rvOutputId": 72,
+                "short": "LoadShedMW",
+                "category": "electrical"
+            },
+            "24": {
+                "description": "Range Load Shed Relay",
+                "id": 24,
+                "long": "C12.5 Range Load Shed Relay",
+                "rvOutputId": 97,
+                "short": "LoadShedRng",
+                "category": "electrical"
+            },
+            "25": {
+                "description": "Sets General Power JD",
+                "id": 25,
+                "long": "General Power JD",
+                "rvOutputId": 38,
+                "short": "GenPowerJD",
+                "category": "electrical"
+            },
+            "26": {
+                "description": "Parking Brake Ground to Slide Controller CFS",
+                "id": 26,
+                "long": "C14.6 Parking Brake Signal CFS",
+                "rvOutputId": 164,
+                "short": "ParkingCFS",
+                "category": "movable"
+            },
+            "27": {
+                "description": "LP Generator Start",
+                "id": 27,
+                "long": "C2.10/2 LP Gen Start",
+                "rvOutputId": 162,
+                "short": "LPGenStart",
+                "category": "energy",
+                "circuitType": "H-BRIDGE"
+            },
+            "28": {
+                "description": "LP Generator Stop",
+                "id": 28,
+                "long": "C2.13/5 LP Gen Stop",
+                "rvOutputId": 163,
+                "short": "LPGenStop",
+                "category": "energy",
+                "circuitType": "H-BRIDGE"
+            }
+        },
+        "switches": {},
+        "KEYPAD_CONTROLS": {
+            "5": {
+                "Name": "Porch",
+                "zone_id": 7
+            },
+            "6": {
+                "Name": "Awning On",
+                "zone_id": 17
+            },
+            "7": {
+                "Name": "Lounge",
+                "zone_id": 8
+            },
+            "8": {
+                "Name": "Compartment",
+                "zone_id": 15
+            },
+            "9": {
+                "Name": "All On",
+                "action": "hal_action",
+                "category": "lighting",
+                "function": "smartToggle",
+                "params": {
+                    "onOff": 1
+                }
+            },
+            "10": {
+                "Name": "All Off",
+                "action": "hal_action",
+                "category": "lighting",
+                "function": "smartToggle",
+                "params": {
+                    "onOff": 0
+                }
+            }
+        },
+        "SI_CONTROLS": {
+            "13-2": {
+                "Name": "Bunk Light",
+                "Comment": "Input 1 # Momentary",
+                "zone_id": 1
+            },
+            "13-4": {
+                "Name": "Front Bed OVHD",
+                "Comment": "Input 2 # Momentary",
+                "zone_id": 2
+            },
+            "13-6": {
+                "Name": "Input 3",
+                "Comment": "REAR_BED OVHD - Momentary",
+                "zone_id": 3
+            },
+            "13-8": {
+                "Name": "Input 4",
+                "Comment": "BED_LIGHT - Momentary",
+                "zone_id": 4
+            },
+            "13-10": {
+                "Name": "Input 5",
+                "Comment": "BED_LIGHT Accent - Momentary",
+                "zone_id": 5
+            },
+            "13-12": {
+                "Name": "Input 6",
+                "Comment": "SERVICE_LIGHT - Latching",
+                "zone_id": 6
+            }
+        },
+        "RV1_CONTROLS": {
+            "4-7": {
+                "bank": 4,
+                "output": 7,
+                "Name": "PSM - Park Brake Engaged",
+                "Comment": "C5.13 Park Brake status as received by Sprinter PSM",
+                "action": "hal_action_component",
+                "category": "vehicle",
+                "function": "update_park_brake",
+                "params": {
+                    "$active": "bool"
+                }
+            },
+            "4-5": {
+                "bank": 4,
+                "output": 5,
+                "Name": "PSM - Ignition",
+                "Comment": "C5.14 Ignition status as received by Sprinter PSM",
+                "action": "hal_action_component",
+                "category": "vehicle",
+                "function": "update_ignition",
+                "params": {
+                    "$active": "bool"
+                }
+            },
+            "6-1": {
+                "bank": 6,
+                "output": 1,
+                "Name": "PSM - Transmission not in Park",
+                "Comment": "C5.1 Transmission status as received by Sprinter PSM",
+                "action": "hal_action_component",
+                "category": "vehicle",
+                "function": "update_transmission",
+                "params": {
+                    "$active": "bool"
+                }
+            },
+            "6-10": {
+                "bank": 6,
+                "output": 10,
+                "Name": "C5.6 - Bath Light Switch",
+                "Comment": "C5.6 RV1 Bath Light Switch Input",
+                "zone_id": 13
+            },
+            "6-12": {
+                "bank": 6,
+                "output": 12,
+                "Name": "C5.7 - Dining OVHD Light Switch",
+                "Comment": "C5.7 RV1 Dining OVHD Light Switch Input",
+                "zone_id": 9
+            },
+            "6-14": {
+                "bank": 6,
+                "output": 14,
+                "Name": "C5.8 - Galley Light Switch",
+                "Comment": "C5.8 RV1 Galley Light Switch Input",
+                "zone_id": 10
+            },
+            "6-16": {
+                "bank": 6,
+                "output": 16,
+                "Name": "C5.9 - Galley OVHD Light Switch",
+                "Comment": "C5.9 RV1 Galley OVHD Light Switch Input",
+                "zone_id": 11
+            },
+            "6-20": {
+                "Name": "Bank 6 - Input 20",
+                "Comment": "C11.2 Bath Accent Light - Momentary",
+                "zone_id": 14
+            },
+            "6-22": {
+                "Name": "Bank 6 - Input 22",
+                "Comment": "C11.3 Wardrobe Light - Momentary",
+                "zone_id": 12
+            },
+            "4-13": {
+                "bank": 4,
+                "output": 13,
+                "Name": "Generator - Generator Run",
+                "Comment": "C5.18 Generator Run Status",
+                "action": "hal_action_component",
+                "category": "energy",
+                "function": "update_generator_run",
+                "params": {
+                    "$active": "bool",
+                    "instance": 1
+                }
+            }
+        },
+        "TOGGLE_ZONES": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "17"
+        ]
+    },
+    "alert_items": {
+        "50009": {
+            "notification_id": 50009,
+            "instance": 1,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "watersystems:wt50009",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 4,
+            "trigger_value": 99,
+            "header": "Fresh water tank full",
+            "msg": "Fresh water tank is full",
+            "type": 0
+        },
+        "50034": {
+            "notification_id": 50034,
+            "instance": 1,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "watersystems:wt50034",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 5,
+            "trigger_value": 25,
+            "header": "Fresh water tank getting low",
+            "msg": "Fresh water tank is below {}%",
+            "type": 0
+        },
+        "50008": {
+            "notification_id": 50008,
+            "instance": 1,
+            "priority": 1,
+            "user_selected": 1,
+            "code": "watersystems:wt50008",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 5,
+            "trigger_value": 10,
+            "header": "Fresh water tank low",
+            "msg": "Fresh water tank is below {}%",
+            "type": 0
+        },
+        "50007": {
+            "notification_id": 50007,
+            "instance": 1,
+            "priority": 0,
+            "user_selected": 0,
+            "code": "watersystems:wt50007",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 5,
+            "trigger_value": 1,
+            "header": "Fresh water tank empty",
+            "msg": "Fresh water tank is empty!",
+            "type": 0
+        },
+        "50010": {
+            "notification_id": 50010,
+            "instance": 2,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "watersystems:wt50010",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 5,
+            "trigger_value": 1,
+            "header": "Gray water tank empty",
+            "msg": "Gray water tank is empty!",
+            "type": 0
+        },
+        "50035": {
+            "notification_id": 50035,
+            "instance": 2,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "watersystems:wt50035",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 4,
+            "trigger_value": 75,
+            "header": "Gray water approaching high",
+            "msg": "Gray water tank is filling up!",
+            "type": 0
+        },
+        "50011": {
+            "notification_id": 50011,
+            "instance": 2,
+            "priority": 1,
+            "user_selected": 1,
+            "code": "watersystems:wt50011",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 4,
+            "trigger_value": 90,
+            "header": "Gray water tank High",
+            "msg": "Gray water tank is above {}%",
+            "type": 0
+        },
+        "50012": {
+            "notification_id": 50012,
+            "instance": 2,
+            "priority": 0,
+            "user_selected": 1,
+            "code": "watersystems:wt50012",
+            "trigger_events": [
+                8600
+            ],
+            "trigger_type": 4,
+            "trigger_value": 99,
+            "header": "Gray water tank Full",
+            "msg": "Gray Water is about to overflow!",
+            "type": 0
+        },
+        "50015": {
+            "notification_id": 50015,
+            "instance": 1,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "energy:ba50015",
+            "trigger_events": [
+                7809
+            ],
+            "trigger_type": 4,
+            "trigger_value": 99,
+            "header": "Battery charged",
+            "msg": "Battery fully charged",
+            "type": 1
+        },
+        "50016": {
+            "notification_id": 50016,
+            "instance": 1,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "energy:ba50021",
+            "trigger_events": [
+                7809
+            ],
+            "trigger_type": 5,
+            "trigger_value": 10,
+            "header": "Battery low",
+            "msg": "Battery voltage very low.",
+            "type": 0
+        },
+        "50017": {
+            "notification_id": 50017,
+            "instance": 1,
+            "priority": 4,
+            "user_selected": 1,
+            "code": "energy:ba50017",
+            "trigger_events": [
+                7809
+            ],
+            "trigger_type": 5,
+            "trigger_value": 1,
+            "header": "Battery OFF",
+            "msg": "Battery Turned OFF, out of power!",
+            "type": 1
+        },
+        "50006": {
+            "notification_id": 50006,
+            "instance": 1,
+            "priority": 0,
+            "user_selected": 1,
+            "code": "climate:rf50006",
+            "trigger_events": [
+                9400
+            ],
+            "trigger_type": 8,
+            "trigger_value": "1.11,3.33",
+            "header": "Refrigerator Temp",
+            "msg": "Refrigerator Temp. out of range!",
+            "type": 0
+        },
+        "50036": {
+            "ts_id": 0,
+            "notification_id": 50036,
+            "instance": 2,
+            "priority": 0,
+            "user_selected": 1,
+            "code": "climate:fr50036",
+            "trigger_events": [
+                9400
+            ],
+            "trigger_type": 8,
+            "trigger_value": "-4,0",
+            "header": "Freezer Temp",
+            "msg": "Freezer Temp. out of range!",
+            "type": 0
+        },
+        "50020": {
+            "notification_id": 50020,
+            "instance": 1,
+            "priority": 1,
+            "user_selected": 1,
+            "code": "climate:th50020",
+            "trigger_events": [
+                6802
+            ],
+            "trigger_type": 5,
+            "trigger_value": 0.0,
+            "header": "Coach Temperature Low",
+            "msg": "Coach temperature is low!",
+            "type": 0
+        },
+        "50021": {
+            "notification_id": 50021,
+            "instance": 1,
+            "priority": 1,
+            "user_selected": 1,
+            "code": "climate:th50021",
+            "trigger_events": [
+                6802
+            ],
+            "trigger_type": 4,
+            "trigger_value": 35.0,
+            "header": "Coach Temperature High",
+            "msg": "Coach temperature is high!",
+            "type": 0
+        },
+        "50033": {
+            "notification_id": 50033,
+            "instance": 1,
+            "priority": 1,
+            "user_selected": 1,
+            "code": "system:ot50033",
+            "trigger_events": [
+                9201
+            ],
+            "trigger_type": 1,
+            "trigger_value": 32.22,
+            "header": "OTA Received",
+            "msg": "OTA Ready to Install",
+            "type": 0
+        }
+    },
+    "hal_categories": {
+        "climate": "modules.hardware._500.hw_climate",
+        "electrical": "modules.hardware._500.hw_electrical",
+        "energy": "modules.hardware._500.hw_energy",
+        "lighting": "modules.hardware._500.hw_lighting",
+        "vehicle": "modules.hardware._500.hw_vehicle",
+        "watersystems": "modules.hardware._500.hw_watersystems",
+        "connectivity": "modules.hardware.cradlepoint.hw_connectivity",
+        "system": "modules.hardware.hw_system",
+        "features": "modules.sw_features"
+    },
+    "can_mapping": {
+        "ambient_temperature": "climate",
+        "roof_fan_status_1": "climate",
+        "thermostat_ambient_status": "climate",
+        "air_conditioner_status": "climate",
+        "heat_pump_status": "climate",
+        "dc_dimmer_command_2": "electrical",
+        "dc_source_status_1": "energy",
+        "dc_source_status_2": "energy",
+        "dc_source_status_3": "energy",
+        "inverter_ac_status_1": "energy",
+        "inverter_status": "energy",
+        "charger_ac_status_1": "energy",
+        "charger_ac_status_2": "energy",
+        "charger_status": "energy",
+        "charger_status_2": "energy",
+        "charger_configuration_status": "energy",
+        "charger_configuration_status_2": "energy",
+        "solar_controller_status": "energy",
+        "awning_status": "movables",
+        "awning_status_2": "movables",
+        "dm_rv": "system",
+        "request_for_dgn": "system",
+        "waterheater_status": "watersystems",
+        "waterheater_status_2": "watersystems",
+        "prop_tm620_config_status": "watersystems",
+        "heartbeat": "electrical",
+        "rvswitch": "electrical",
+        "rvoutput": "electrical",
+        "czone_alerts": "electrical",
+        "battery_status": "energy",
+        "fluid_level": "watersystems",
+        "vin_response": "vehicle",
+        "aat_ambient_air_temperature": "vehicle",
+        "odo_odometer": "vehicle",
+        "vehicle_status_1": "vehicle",
+        "vehicle_status_2": "vehicle",
+        "state_of_charge": "vehicle",
+        "dc_charging_state": "vehicle",
+        "pb_park_brake": "vehicle",
+        "tr_transmission_range": "vehicle"
+    }
+}

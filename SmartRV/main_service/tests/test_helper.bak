@@ -1,0 +1,132 @@
+import unittest
+
+import sys
+sys.path.append('../')
+
+main_service.wgo_main_service.modules.data_helper import (
+    byte_flip,
+    flatten_dict
+)
+
+main_service.wgo_main_service.modules.ui_helper import (
+    get_displayed_temp,
+)
+
+class DataHelperTests(unittest.TestCase):
+    def test_byteflip_min(self):
+        self.assertEqual(
+            byte_flip(0), 0
+        )
+
+    def test_byteflip_max(self):
+        self.assertEqual(
+            byte_flip(65535), 65535
+        )
+
+    def test_byteflip_mid(self):
+        self.assertEqual(
+            byte_flip(5700), 17430
+        )
+
+    def test_byteflip_low(self):
+        self.assertRaises(
+            ValueError, byte_flip, -1
+        )
+
+    def test_byteflip_high_border(self):
+        self.assertRaises(
+            ValueError, byte_flip, 65536
+        )
+
+    def test_byteflip_high(self):
+        with self.assertRaises(ValueError):
+            byte_flip(1000000)
+
+    ##### Flatten dict
+
+    def test_flattendict(self):
+        input_dict = {
+            'a': {
+                'b': {
+                    'c': 'DomTestValue',
+                    'e': 'DomAgain'
+                }
+            },
+            'd': 'Dom',
+            'f': ['1', '2', '3'],
+            'g': [
+                {
+                    'd1': ['dd', 'da', 'de']
+                }
+            ]
+        }
+        self.assertEqual(
+            flatten_dict(input_dict).get('g.d1[1]'), 'da'
+        )
+        self.assertEqual(
+            flatten_dict(input_dict).get('a.b.e'), 'DomAgain'
+        )
+
+
+class UIHelperTests(unittest.TestCase):
+    # Test unit preferances
+    # Test ac modes
+    # Test displayed temp
+    def test_displaytemp_fahrenheit(self):
+        temp_unit = 0       # Fahrenheit
+        zero = 0.0
+        high = 100.0
+        low = -50.0
+        dec = 31.25
+        self.assertEqual(
+            get_displayed_temp(None, temp_unit),
+            '--'
+        )
+        self.assertEqual(
+            get_displayed_temp(zero, temp_unit),
+            32.0
+        )
+        self.assertEqual(
+            get_displayed_temp(high, temp_unit),
+            212.0
+        )
+        self.assertEqual(
+            get_displayed_temp(low, temp_unit),
+            -58.0
+        )
+        self.assertEqual(
+            get_displayed_temp(dec, temp_unit),
+            88.0
+        )
+
+
+    def test_displaytemp_celcius(self):
+        temp_unit = 1       # Celsius
+        zero = 0.0
+        high = 100.0
+        low = -50.0
+        dec = 31.2556
+        self.assertEqual(
+            get_displayed_temp(None, temp_unit),
+            '--'
+        )
+        self.assertEqual(
+            get_displayed_temp(zero, temp_unit),
+            0.0
+        )
+        self.assertEqual(
+            get_displayed_temp(high, temp_unit),
+            100.0
+        )
+        self.assertEqual(
+            get_displayed_temp(low, temp_unit),
+            -50
+        )
+        self.assertEqual(
+            get_displayed_temp(dec, temp_unit),
+            31.5
+        )
+
+
+if __name__ == '__main__':
+    unittest.main()

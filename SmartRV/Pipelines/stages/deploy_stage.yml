@@ -1,0 +1,68 @@
+parameters:
+  regionAbrvs: ['cus']
+  environmentName: ''
+  serviceName: ''
+  dependsOnEnv: ''
+  azureServiceConnectionName: ''
+  azureStorageAccount: ''
+  deviceType: 'common'
+  cohorts: 'alpha'
+  isRelease: false
+  publish: false
+  smartRvVersion: '1.0.0'
+  modules: []
+  deviceTypesFunctionUrlBase: ''
+  devicesFunctionUrlBase: ''
+  functionApiKeyName: ''
+
+stages:
+# Run these stages If isRelease or Publish is true AND the source branch is 'develop' or 'release' or 'main'
+- ${{ if or(eq(parameters.isRelease, true),eq(parameters.publish, true)) }}:
+  - ${{ each regionAbrv in parameters.regionAbrvs }}:
+    - stage: release_${{ parameters.serviceName }}_${{parameters.environmentName }}_${{ regionAbrv }}
+      variables:
+        ${{ if eq(parameters.dependsOnEnv,'' )}}:
+          dependsOnEnv: '${{ parameters.serviceName }}_build'
+        ${{ else }}:
+          dependsOnEnv: 'release_${{ parameters.serviceName }}_${{parameters.dependsOnEnv}}_${{ regionAbrv }}'
+        cohorts: ${{ convertToJson(split(parameters.cohorts, ','))}}
+        copyDropJobName: copy_files_drop_folder_${{ parameters.environmentName }}
+      dependsOn: ${{ variables.dependsOnEnv }}
+
+      jobs:
+      - template: ../jobs/copy_files_drop_folder_job.yml
+        parameters:
+          jobName: ${{ variables.copyDropJobName }}
+          dependsOnEnv: ${{ parameters.dependsOnEnv }}
+          environmentName: ${{ parameters.environmentName }}
+          sourceFolder: $(Pipeline.Workspace)
+          azureServiceConnectionName: ${{ parameters.azureServiceConnectionName }}
+          azureStorageAccount: ${{ parameters.azureStorageAccount }}
+          dropContainerName: 'iot-private-content-container'
+          deviceType: ${{ parameters.deviceType }}
+          smartRvVersion: ${{ parameters.smartRvVersion}}
+          modules: ${{ parameters.modules}}
+          cohorts: ${{ variables.cohorts }}
+          isRelease: ${{ parameters.isRelease }}
+          publish: ${{ parameters.publish }}
+          deviceTypesFunctionUrlBase: ${{ parameters.deviceTypesFunctionUrlBase}}
+          devicesFunctionUrlBase: ${{ parameters.devicesFunctionUrlBase}}
+          functionApiKeyName: ${{ parameters.functionApiKeyName }}
+      - template: ../jobs/deploy_and_tag_job.yml
+        parameters:
+          dependsOnEnv: ${{ parameters.dependsOnEnv }}
+          dependsOnJob: ${{ variables.copyDropJobName }}
+          environmentName: ${{ parameters.environmentName }}
+          sourceFolder: $(Pipeline.Workspace)
+          azureServiceConnectionName: ${{ parameters.azureServiceConnectionName }}
+          azureStorageAccount: ${{ parameters.azureStorageAccount }}
+          dropContainerName: 'iot-private-content-container'
+          deviceType: ${{ parameters.deviceType }}
+          smartRvVersion: ${{ parameters.smartRvVersion}}
+          modules: ${{ parameters.modules}}
+          cohorts: ${{ variables.cohorts }}
+          isRelease: ${{ parameters.isRelease }}
+          publish: ${{ parameters.publish }}
+          deviceTypesFunctionUrlBase: ${{ parameters.deviceTypesFunctionUrlBase }}
+          devicesFunctionUrlBase: ${{ parameters.devicesFunctionUrlBase }}
+          functionApiKeyName: ${{ parameters.functionApiKeyName }}

@@ -1,0 +1,90 @@
+parameters:
+  dependsOnEnv: ''
+  dependsOnJob: ''
+  environmentName: ''
+  sourceFolder: ''
+  deviceType: ''
+  cohorts: []
+  cohortsForEndToEndTests: 'alpha'
+  smartRvVersion: "undefined"
+  azureServiceConnectionName: ''
+  azureStorageAccount: ''
+  dropContainerName: 'iot-private-content-container'
+  deploymentArtifactName: "deployment"
+  modules: []
+  deviceTypesFunctionUrlBase: ''
+  devicesFunctionUrlBase: ''
+  functionApiKeyName: ''
+  isRelease: false
+  publish: false
+
+jobs:
+    - job: deploy_and_test_${{ parameters.environmentName }}
+      dependsOn: ${{ parameters.dependsOnJob }}
+      displayName: deploy and test ${{ parameters.environmentName }}
+      pool: server
+      steps:
+        - ${{ if and(ne(parameters.deviceTypesFunctionUrlBase, ''), ne(parameters.functionApiKeyName, '')) }}:
+          - task: AzureFunction@1
+            displayName: deploy ${{parameters.deviceType}} to ${{ parameters.environmentName }}
+            inputs:
+              function: ${{ parameters.deviceTypesFunctionUrlBase }}/releases
+              key: $(${{ parameters.functionApiKeyName }})
+              method: 'POST'
+              body: '{ "deviceType": "${{parameters.deviceType}}", "version": "${{parameters.smartRvVersion}}", "cohorts": ${{ parameters.cohorts }}, "cohortReplace": false, "release": ${{ parameters.isRelease }}, "publish": ${{ parameters.publish }} }'
+              waitForCompletion: 'false'
+        - ${{ if and(ne(parameters.devicesFunctionUrlBase, ''), ne(parameters.functionApiKeyName, '')) }}:
+          - task: AzureFunction@1
+            displayName: find ${{parameters.deviceType}} in ${{ parameters.environmentName }}
+            inputs:
+              function: ${{ parameters.devicesFunctionUrlBase }}/query
+              key: $(${{ parameters.functionApiKeyName }})
+              queryParameters: deviceType=${{parameters.deviceType}}&pageSize=4&cohorts=${{ parameters.cohortsForEndToEndTests }}
+              method: 'GET'
+              waitForCompletion: 'false'
+    - ${{ if eq(parameters.dependsOnEnv, '') }}:
+      - job: tag_call_${{ parameters.environmentName }}
+        condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/develop'),eq(variables['Build.SourceBranch'], 'refs/heads/release'),eq(variables['Build.SourceBranch'], 'refs/heads/main')))
+        dependsOn: deploy_and_test_${{ parameters.environmentName }}
+        displayName: tag version
+        pool:
+          vmImage: "ubuntu-latest"
+        steps:
+          - checkout: self
+            fetchDepth: 0
+            path: SmartRV
+            clean: true
+            fetchTags: true
+            persistCredentials: true
+          - task: AzureCLI@2
+            displayName: tag SmartRV published version:${{parameters.smartRvVersion}}
+            inputs:
+              azureSubscription: '${{ parameters.azureServiceConnectionName }}'
+              scriptType: 'pscore'
+              scriptLocation: 'inlineScript'
+              workingDirectory: $(Agent.BuildDirectory)/SmartRV
+              inlineScript: |
+                git config --global user.email "$(Build.RequestedForEmail)"
+                git config --global user.name "$(Build.RequestedFor)"
+                git tag -a v${{parameters.smartRvVersion}} -m $(Build.SourceBranch) -f
+                git push origin v${{parameters.smartRvVersion}} -f
+              pwsh: true # For Linux
+          - checkout: frontend
+            path: frontend
+            fetchDepth: 0
+            clean: true
+            fetchTags: true
+            persistCredentials: true
+          - task: AzureCLI@2
+            displayName: tag frontend published version:${{parameters.smartRvVersion}}
+            inputs:
+              azureSubscription: '${{ parameters.azureServiceConnectionName }}'
+              scriptType: 'pscore'
+              scriptLocation: 'inlineScript'
+              workingDirectory: $(Agent.BuildDirectory)/frontend
+              inlineScript: |
+                git config --global user.email "$(Build.RequestedForEmail)"
+                git config --global user.name "$(Build.RequestedFor)"
+                git tag -a v${{parameters.smartRvVersion}} -m $(Build.SourceBranch) -f
+                git push origin v${{parameters.smartRvVersion}} -f
+              pwsh: true # For Linux

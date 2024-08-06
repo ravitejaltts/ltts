@@ -1,0 +1,90 @@
+.settings {
+  background-color: var(--fills-surface-2);
+  /* height: 100vh; */
+  padding: 24px;
+  /* text-align: center; */
+  min-height: 50vh;
+  overflow: scroll;
+  border-radius: 15px;
+  /* padding: 20px 10px 30px 10px; */
+  box-sizing: border-box;
+}
+
+.max {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+}
+
+.closeIcon {
+  height: 40px;
+  width: 40px;
+}
+
+.closeIcon path {
+  fill: var(--text-main);
+}
+.backText {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--textColor1);
+}
+.heading {
+  text-align: center;
+  color: var(--text-main);
+  font-size: 30px;
+  width: 100%;
+  margin: 0;
+  font-family: Roboto;
+  font-size: 24px;
+}
+.infoText {
+  color: var(--text-deemphasized);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  margin-left: 10px;
+  margin-top: 49px;
+  margin-bottom: 8px;
+}
+
+.infoContainer {
+  background-color: var(--mode-bg-1);
+  border-radius: 15px;
+}
+
+/* back */
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+}
+.back svg path {
+  fill: var(--ui-elements-icon-fill);
+}
+
+.back h2 {
+  margin: 0;
+}
+
+.grpHeading {
+  margin-top: 32px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.44px;
+  text-align: left;
+  color: var(--text-deemphasized);
+}
+
+.backTxt {
+  color: var(--textColor1);
+}

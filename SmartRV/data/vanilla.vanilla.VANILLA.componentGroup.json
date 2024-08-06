@@ -1,0 +1,18 @@
+{
+    "$schema": "./$schema.json",
+    "id": "vanilla.vanilla.VANILLA",
+    "type": "componentGroup",
+    "description": "component groups allow us to piece together rv components based on its device type, model, floorplan starting with lowest to greatest specificity",
+    "deviceType": "vanilla",
+    "seriesModel": "vanilla",
+    "floorPlan": "VANILLA",
+    "attributes": {
+        "name": "Vanilla Manufacturing Floorplan",
+        "seriesName": "VANILLA",
+        "seriesCode": "vanilla",
+        "version": "1.0.0"
+    },
+    "optionCodes": [],
+    "filters": {},
+    "components": []
+}

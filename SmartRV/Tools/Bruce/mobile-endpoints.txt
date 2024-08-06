@@ -1,0 +1,66 @@
+[Tuesday 4:37 PM] Rick Krause
+
+        /apiLighting
+        GET /api/lighting
+        GET, PUT /api/lighting/zones/:zoneId/state
+
+        GET, PUT /api/lighting/features/smarttoggle/state
+        GET /api/lighting/features/preset/:presetId/state -
+        PUT /api/lighting/features/preset/:presetId/on    -
+        PUT /api/lighting/features/preset/:presetId/set   -
+
+
+
+Lighting Groups
+0 is Master - is this relevant ?
+
+GET, PUT /api/lighting/gourp/master/state {'onOff': 0} is off or request to turn off
+
+1, 2 ,3 are the Presets
+
+GET /api/lighting/group/:presetId/state   - new
+    Get - Example {'onOff': 0}  -> preset is off
+
+PUT /api/lighting/group/:presetId/activate      - new
+
+PUT /api/lighting/group/:presetId/set           - new
+    - not valid for Master/SmartToggle
+    - For the presets this records the current state of the lighting systsem
+
+
+4:34
+
+Water
+GET /api/watersystems
+GET, PUT /api/watersystems/pump/${id}/state
+GET, PUT /api/watersystems/heater/${id}/state
+GET /api/watersystems/tank/${id}/state              - lvl
+
+4:36
+
+Climate
+GET /api/climate
+
+GET /api/climate/zones/${id}
+
+GET /api/climate/zones/${zoneId}/sensors/${sensorId}/state?unit=${unit}  ok - changed 6/23 was reporting 'temperature'
+
+GET, PUT /api/climate/zones/${zoneId}/fans/${fanId}/state         - Names, Events ok  - put rainSens ok - not implemented
+
+GET, PUT /api/climate/zones/${zoneId}/thermostat/state            - Names, EVents - also takes english set ex'AUTO' and converts
+
+GET /api/climate/zones/${zoneId}/heaters/${heaterId}/state      - ?? not endpoint not found
+
+GET, PUT /api/climate/zones/${zoneId}/acfan/${acId}/state
+
+
+4:37
+
+Energy
+GET /api/energy
+PUT /api/energy/zones/${zoneId}/inverters/${inverterId}/state
+PUT /api/energy/zones/${zoneId}/sources/${sourceId}/state
+
+ star 1
+
+Slack

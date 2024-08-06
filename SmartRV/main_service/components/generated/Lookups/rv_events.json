@@ -1,0 +1,1406 @@
+[
+    {
+        "name": "SERVICE_START",
+        "value": 500
+    },
+    {
+        "name": "SERVICE_RESTART",
+        "value": 501
+    },
+    {
+        "name": "SERVICE_KILL",
+        "value": 502
+    },
+    {
+        "name": "SERVICE_STOP",
+        "value": 503
+    },
+    {
+        "name": "FLOORPLAN_LOADED",
+        "value": 600
+    },
+    {
+        "name": "FLOORPLAN_ERROR",
+        "value": 601
+    },
+    {
+        "name": "SYSTEM_ACTIVITY_STATE_CHANGE",
+        "value": 4000
+    },
+    {
+        "name": "LOCKOUT_STATE_CHANGE",
+        "value": 4001
+    },
+    {
+        "name": "WATER_HEATER_OPERATING_MODE_CHANGE",
+        "value": 5000
+    },
+    {
+        "name": "WATER_HEATER_WATER_TEMPERATURE_CHANGE",
+        "value": 5001
+    },
+    {
+        "name": "WATER_HEATER_WATER_SET_TEMPERATURE_CHANGE",
+        "value": 5002
+    },
+    {
+        "name": "WATER_HEATER_ONOFF_CHANGE",
+        "value": 5003
+    },
+    {
+        "name": "WATER_HEATER_ERROR_CODES",
+        "value": 5199
+    },
+    {
+        "name": "WATER_PUMP_OPERATING_MODE_CHANGE",
+        "value": 5200
+    },
+    {
+        "name": "WATER_PUMP_ERROR_CODES",
+        "value": 5399
+    },
+    {
+        "name": "AWNING_MODE_CHANGE",
+        "value": 5400
+    },
+    {
+        "name": "AWNING_PERCENT_EXTENDED_CHANGE",
+        "value": 5401
+    },
+    {
+        "name": "AWNING_MOTION_SENSE_SENSITIVITY_CHANGE",
+        "value": 5402
+    },
+    {
+        "name": "AWNING_MOTION_SENSE_TRIGGERED",
+        "value": 5403
+    },
+    {
+        "name": "AWNING_LIGHT_MODE_CHANGE",
+        "value": 5404
+    },
+    {
+        "name": "AWNING_LIGHT_BRIGHTNESS_LEVEL_CHANGE",
+        "value": 5405
+    },
+    {
+        "name": "AWNING_MOTION_SENSE_MODE_CHANGE",
+        "value": 5406
+    },
+    {
+        "name": "AWNING_LIGHT_ERROR_CODES",
+        "value": 5598
+    },
+    {
+        "name": "AWNING_ERROR_CODES",
+        "value": 5599
+    },
+    {
+        "name": "SLIDEOUT_MODE_CHANGE",
+        "value": 5600
+    },
+    {
+        "name": "LEVELING_JACKS_MODE_CHANGE",
+        "value": 5800
+    },
+    {
+        "name": "INVERTER_CHARGER_INVERTER_MODE_CHANGE",
+        "value": 6000
+    },
+    {
+        "name": "INVERTER_CHARGER_CURRENT_METER_AFTER_INVERTER_CHANGE",
+        "value": 6001
+    },
+    {
+        "name": "INVERTER_CHARGER_INVERTER_STATUS_CHANGE",
+        "value": 6002
+    },
+    {
+        "name": "INVERTER_CHARGER_INVERTER_VOLTAGE_CHANGE",
+        "value": 6003
+    },
+    {
+        "name": "INVERTER_CHARGER_INVERTER_CURRENT_CHANGE",
+        "value": 6004
+    },
+    {
+        "name": "INVERTER_CHARGER_INVERTER_FREQUENCY_CHANGE",
+        "value": 6005
+    },
+    {
+        "name": "INVERTER_CHARGER_CHARGER_STATUS_CHANGE",
+        "value": 6006
+    },
+    {
+        "name": "INVERTER_CHARGER_CHARGER_VOLTAGE_CHANGE",
+        "value": 6007
+    },
+    {
+        "name": "INVERTER_CHARGER_CHARGER_CURRENT_CHANGE",
+        "value": 6008
+    },
+    {
+        "name": "INVERTER_CHARGER_CHARGER_FREQUENCY_CHANGE",
+        "value": 6009
+    },
+    {
+        "name": "INVERTER_CHARGER_CHARGER_CAPACITY_CHANGE",
+        "value": 6010
+    },
+    {
+        "name": "INVERTER_CHARGER_CHARGER_ERROR_CODES",
+        "value": 6199
+    },
+    {
+        "name": "LIGHTING_ZONE_NAME_CHANGE",
+        "value": 6200
+    },
+    {
+        "name": "LIGHTING_ZONE_MODE_CHANGE",
+        "value": 6201
+    },
+    {
+        "name": "LIGHTING_ZONE_RGBW_COLOR_CHANGE",
+        "value": 6202
+    },
+    {
+        "name": "LIGHTING_ZONE_BRIGHTNESS_LEVEL_CHANGE",
+        "value": 6203
+    },
+    {
+        "name": "LIGHTING_ZONE_COLOR_TEMP_CHANGE",
+        "value": 6204
+    },
+    {
+        "name": "LIGHTING_ZONE_ERROR_CODES",
+        "value": 6399
+    },
+    {
+        "name": "LIGHTING_GROUP_LIGHT_SWITCH_NAME_CHANGE",
+        "value": 6400
+    },
+    {
+        "name": "LIGHTING_GROUP_LIGHT_SWITCH_OPERATING_MODE_CHANGE",
+        "value": 6401
+    },
+    {
+        "name": "LIGHTING_GROUP_LIGHT_SWITCH_LIGHT_MAPPINGS_CHANGE",
+        "value": 6402
+    },
+    {
+        "name": "LIGHTING_GROUP_BRIGHTNESS_LEVEL_CHANGE",
+        "value": 6403
+    },
+    {
+        "name": "LIGHTING_GROUP_ERROR_CODES",
+        "value": 6599
+    },
+    {
+        "name": "GENERATOR_MODE_CHANGE",
+        "value": 6601
+    },
+    {
+        "name": "GENERATOR_OPERATING_MODE_CHANGE",
+        "value": 6602
+    },
+    {
+        "name": "THERMOSTAT_OPERATING_MODE_CHANGE",
+        "value": 6800
+    },
+    {
+        "name": "THERMOSTAT_SCHEDULE_DAY_CHANGE",
+        "value": 6801
+    },
+    {
+        "name": "THERMOSTAT_INDOOR_TEMPERATURE_CHANGE",
+        "value": 6802
+    },
+    {
+        "name": "THERMOSTAT_CURRENT_HEAT_TEMPERATURE_SET_CHANGE",
+        "value": 6803
+    },
+    {
+        "name": "THERMOSTAT_CURRENT_COOL_TEMPERATURE_SET_CHANGE",
+        "value": 6804
+    },
+    {
+        "name": "THERMOSTAT_COMPRESSOR_MIN_OFF_TIME_CHANGE",
+        "value": 6805
+    },
+    {
+        "name": "THERMOSTAT_COMPRESSOR_MIN_ON_TIME_CHANGE",
+        "value": 6806
+    },
+    {
+        "name": "THERMOSTAT_COOL_DIFFERENTIAL_TEMPERATURE_CHANGE",
+        "value": 6807
+    },
+    {
+        "name": "THERMOSTAT_COOL_TEMPERATURE_RANGE_CHANGE",
+        "value": 6808
+    },
+    {
+        "name": "THERMOSTAT_HEAT_DIFFERENTIAL_TEMPERATURE_CHANGE",
+        "value": 6809
+    },
+    {
+        "name": "THERMOSTAT_HEAT_TEMPERATURE_RANGE_CHANGE",
+        "value": 6810
+    },
+    {
+        "name": "THERMOSTAT_HEAT_COOL_MIN_DELTA_CHANGE",
+        "value": 6811
+    },
+    {
+        "name": "THERMOSTAT_HEATER_MIN_OFF_TIME_CHANGE",
+        "value": 6812
+    },
+    {
+        "name": "THERMOSTAT_HEATER_MIN_ON_TIME_CHANGE",
+        "value": 6813
+    },
+    {
+        "name": "THERMOSTAT_HIGH_LOW_TEMPERATURE_WARNING_CHANGE",
+        "value": 6814
+    },
+    {
+        "name": "THERMOSTAT_OUTDOOR_TEMPERATURE_CHANGE",
+        "value": 6815
+    },
+    {
+        "name": "THERMOSTAT_CURRENT_OPERATING_MODE_CHANGE",
+        "value": 6816
+    },
+    {
+        "name": "THERMOSTAT_GENERAL_ONOFF_CHANGE",
+        "value": 6817
+    },
+    {
+        "name": "THERMOSTAT_ERROR_CODES",
+        "value": 6999
+    },
+    {
+        "name": "AIR_CONDITIONER_COMPRESSOR_MODE_CHANGE",
+        "value": 7000
+    },
+    {
+        "name": "AIR_CONDITIONER_FAN_SPEED_CHANGE",
+        "value": 7001
+    },
+    {
+        "name": "AIR_CONDITIONER_FAN_MODE_CHANGE",
+        "value": 7002
+    },
+    {
+        "name": "FURNACE_OPERATING_MODE_CHANGE_CHANGE",
+        "value": 7200
+    },
+    {
+        "name": "FURNACE_FAN_SPEED_CHANGE",
+        "value": 7201
+    },
+    {
+        "name": "FURNACE_HEAT_OUTPUT_LEVEL_CHANGE",
+        "value": 7202
+    },
+    {
+        "name": "HEATER_ENERGY_SOURCE_CHANGE",
+        "value": 7203
+    },
+    {
+        "name": "HEATER_MODE_CHANGE",
+        "value": 7204
+    },
+    {
+        "name": "FURNACE_ERROR_CODES",
+        "value": 7399
+    },
+    {
+        "name": "ELECTRIC_HEATER_OPERATING_MODE_CHANGE",
+        "value": 7400
+    },
+    {
+        "name": "ELECTRIC_HEATER_ERROR_CODES",
+        "value": 7599
+    },
+    {
+        "name": "SOLAR_CHARGER_SHUNT_DC_CURRENT_CHANGE",
+        "value": 7600
+    },
+    {
+        "name": "SOLAR_CHARGER_SHUNT_DC_VOLTAGE_CHANGE",
+        "value": 7601
+    },
+    {
+        "name": "SOLAR_CHARGER_SHUNT_DC_POWER_CHANGE",
+        "value": 7602
+    },
+    {
+        "name": "SOLAR_CHARGER_SHUNT_ACTIVE_CHANGE",
+        "value": 7603
+    },
+    {
+        "name": "SOLAR_CHARGER_ERROR_CODES",
+        "value": 7799
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_TEMPERATURE_CHANGE",
+        "value": 7800
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_VOLTAGE_STATUS_CHANGE",
+        "value": 7801
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_DC_CURRENT_CHANGE",
+        "value": 7802
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_DC_POWER_CHANGE",
+        "value": 7803
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_STATE_OF_HEALTH_CHANGE",
+        "value": 7804
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_REMAINING_DISCHARGE_CAPACITY_CHANGE",
+        "value": 7805
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_TIME_REMAINING_TO_EMPTY_CHANGE",
+        "value": 7806
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_TIME_REMAINING_TO_FULL_CHARGE_CHANGE",
+        "value": 7807
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_TIME_REMAINING_INTERPRETATION_CHANGE",
+        "value": 7808
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_STATE_OF_CHARGE_CHANGE",
+        "value": 7809
+    },
+    {
+        "name": "LITHIUM_ION_BATTERY_ERROR_CODES",
+        "value": 7999
+    },
+    {
+        "name": "ALTERNATOR_CHARGER_STATE_CHANGE",
+        "value": 8000
+    },
+    {
+        "name": "ALTERNATOR_VOLTAGE_CHANGE",
+        "value": 8001
+    },
+    {
+        "name": "ALTERNATOR_CURRENT_CHANGE",
+        "value": 8002
+    },
+    {
+        "name": "ALTERNATOR_TEMPERATURE_CHANGE",
+        "value": 8003
+    },
+    {
+        "name": "ALTERNATOR_ERROR_CODES",
+        "value": 8199
+    },
+    {
+        "name": "ROOF_VENT_OPERATING_MODE_CHANGE",
+        "value": 8200
+    },
+    {
+        "name": "ROOF_VENT_DOME_POSITION_CHANGE",
+        "value": 8201
+    },
+    {
+        "name": "ROOF_VENT_FAN_DIRECTION_CHANGE",
+        "value": 8202
+    },
+    {
+        "name": "ROOF_VENT_FAN_SPEED_CHANGE",
+        "value": 8203
+    },
+    {
+        "name": "ROOF_VENT_RAIN_SENSOR_CHANGE",
+        "value": 8204
+    },
+    {
+        "name": "ROOF_VENT_ERROR_CODES",
+        "value": 8399
+    },
+    {
+        "name": "CHASSIS_CHARGING_STATE_CHANGE",
+        "value": 8400
+    },
+    {
+        "name": "CHASSIS_SOC_CHANGE",
+        "value": 8401
+    },
+    {
+        "name": "CHASSIS_REMAINING_TIME_TO_FULL_CHANGE",
+        "value": 8402
+    },
+    {
+        "name": "CHASSIS_VOLTAGE_CHANGE",
+        "value": 8403
+    },
+    {
+        "name": "CHASSIS_RPM_CHANGE",
+        "value": 8404
+    },
+    {
+        "name": "CHASSIS_SPEED_CHANGE",
+        "value": 8405
+    },
+    {
+        "name": "CHASSIS_COOLANT_TEMPERATURE_CHANGE",
+        "value": 8406
+    },
+    {
+        "name": "CHASSIS_MALFUNCTION_INDICATOR_STATUS_CHANGE",
+        "value": 8407
+    },
+    {
+        "name": "CHASSIS_VIN_CHANGE",
+        "value": 8408
+    },
+    {
+        "name": "CHASSIS_NUMBER_OF_IGNITION_CYCLES_CHANGE",
+        "value": 8409
+    },
+    {
+        "name": "CHASSIS_ODOMETER_READING_CHANGE",
+        "value": 8410
+    },
+    {
+        "name": "CHASSIS_DTCS_CHANGE",
+        "value": 8411
+    },
+    {
+        "name": "CHASSIS_IGNITION_STATUS_CHANGE",
+        "value": 8412
+    },
+    {
+        "name": "CHASSIS_PRNDL_STATUS_CHANGE",
+        "value": 8413
+    },
+    {
+        "name": "CHASSIS_FUEL_STATUS_CHANGE",
+        "value": 8414
+    },
+    {
+        "name": "CHASSIS_PARK_BRAKE_CHANGE",
+        "value": 8415
+    },
+    {
+        "name": "CHASSIS_OUTSIDE_TEMPERATURE_CHANGE",
+        "value": 8416
+    },
+    {
+        "name": "CHASSIS_AVAILABLE_MILAGE_RANGE_CHANGE",
+        "value": 8417
+    },
+    {
+        "name": "CHASSIS_CHARGINIG_STATUS_CHANGE",
+        "value": 8418
+    },
+    {
+        "name": "CHASSIS_12V_VOLTAGE_CHANGE",
+        "value": 8419
+    },
+    {
+        "name": "CHASSIS_12V_SOC_CHANGE",
+        "value": 8420
+    },
+    {
+        "name": "CHASSIS_PRO_POWER_STATUS_CHANGE",
+        "value": 8421
+    },
+    {
+        "name": "CHASSIS_TIRE_LOCATION_CHANGE",
+        "value": 8422
+    },
+    {
+        "name": "CHASSIS_TIRE_PRESSURE_CHANGE",
+        "value": 8423
+    },
+    {
+        "name": "CHASSIS_CHARGING_STAGE_CHANGE",
+        "value": 8424
+    },
+    {
+        "name": "CHASSIS_CHARGING_TYPE_CHANGE",
+        "value": 8425
+    },
+    {
+        "name": "CHASSIS_DOOR_LOCK_CHANGE",
+        "value": 8426
+    },
+    {
+        "name": "CHASSIS_TRANSMISSION_NOT_IN_PARK_CHANGE",
+        "value": 8427
+    },
+    {
+        "name": "CHASSIS_ENGINE_RUNNING_CHANGE",
+        "value": 8428
+    },
+    {
+        "name": "CHASSIS_PARK_BRAKE_IGNITION_COMBO_CHANGE",
+        "value": 8429
+    },
+    {
+        "name": "CHASSIS_CHASSIS_ERROR_CODES",
+        "value": 8599
+    },
+    {
+        "name": "WATER_TANK_FLUID_LEVEL_CHANGE",
+        "value": 8600
+    },
+    {
+        "name": "WATER_TANK_TANK_CAPACITY_CHANGE",
+        "value": 8601
+    },
+    {
+        "name": "WATER_TANK_FLUID_TYPE_CHANGE",
+        "value": 8602
+    },
+    {
+        "name": "WATER_TANK_SENSOR_UNDERVOLTAGE",
+        "value": 8603
+    },
+    {
+        "name": "WATER_TANK_SENSOR_OVERVOLTAGE",
+        "value": 8604
+    },
+    {
+        "name": "WATER_TANK_ERROR_CODES",
+        "value": 8799
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_SET_SCREEN_BRIGHTNESS_CHANGE",
+        "value": 8800
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_CURRENT_SCREEN_BRIGHTNESS_CHANGE",
+        "value": 8801
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_RV_SOFTWARE_VERSION_CHANGE",
+        "value": 8802
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_RV_ACTIVE_SOFTWARE_INSTALL_DATE_CHANGE",
+        "value": 8803
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_RV_PREVIOUS_SOFTWARE_VERSION_CHANGE",
+        "value": 8804
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_RV_PREVIOUS_SOFTWARE_INSTALL_DATE_CHANGE",
+        "value": 8805
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_DARK_MODE_CHANGE",
+        "value": 8806
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_USER_RESTART_TRIGGERED_CHANGE",
+        "value": 8807
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_MASTER_RESET_TRIGGERED_CHANGE",
+        "value": 8808
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_USER_SET_TEMPERATURE_UNIT_CHANGE",
+        "value": 8809
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_USER_SET_VOLUME_UNIT_CHANGE",
+        "value": 8810
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_USER_SET_DISTANCE_UNIT_CHANGE",
+        "value": 8811
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_USER_BACKUP_CHANGE",
+        "value": 8812
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_CAN_BUS_TIMEOUT",
+        "value": 8813
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_CAN_BUS_RVC_RED_LAMP_CHANGE",
+        "value": 8814
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_CAN_BUS_RVC_YELLOW_LAMP_CHANGE",
+        "value": 8815
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_SETTINGS_SERVICE_MODE_CHANGE",
+        "value": 8816
+    },
+    {
+        "name": "WINNCONNECT_SYSTEM_MODE_CHANGE",
+        "value": 8817
+    },
+    {
+        "name": "WINNCONNECT_ERROR_CODES",
+        "value": 8999
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_MICROCONTROLLER_MANUFACTURER_CHANGE",
+        "value": 9000
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_MICROCONTROLLER_MODEL_NAME_CHANGE",
+        "value": 9001
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_MICROCONTROLLER_MODEL_REVISION_CHANGE",
+        "value": 9002
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_OS_NAME_CHANGE",
+        "value": 9003
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_OS_REVISION_CHANGE",
+        "value": 9004
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_CURRENT_RAM_USAGE_CHANGE",
+        "value": 9005
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_AVAILABLE_RAM_CHANGE",
+        "value": 9006
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_CPU_USAGE_CHANGE",
+        "value": 9007
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_USED_STORAGE_CHANGE",
+        "value": 9008
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_AVAILABLE_STORAGE_CHANGE",
+        "value": 9009
+    },
+    {
+        "name": "WINNCONNECT_HMI_HARDWARE_UTC_CHANGE",
+        "value": 9010
+    },
+    {
+        "name": "OTA_OPERATING_MODE_CHANGE",
+        "value": 9200
+    },
+    {
+        "name": "OTA_UPDATE_RECEIVED",
+        "value": 9201
+    },
+    {
+        "name": "REFRIGERATOR_TEMPERATURE_CHANGE",
+        "value": 9400
+    },
+    {
+        "name": "REFRIGERATOR_MODE_CHANGE",
+        "value": 9401
+    },
+    {
+        "name": "REFRIGERATOR_BREAKER_TRIPPED",
+        "value": 9598
+    },
+    {
+        "name": "REFRIGERATOR_ERROR_CODES",
+        "value": 9599
+    },
+    {
+        "name": "WIFI_OPERATING_MODE_CHANGE",
+        "value": 9600
+    },
+    {
+        "name": "WIFI_MODE_CHANGE",
+        "value": 9601
+    },
+    {
+        "name": "WIFI_ACCESS_POINT_HIDDEN_CHANGE",
+        "value": 9602
+    },
+    {
+        "name": "WIFI_SECURITY_CHANGE",
+        "value": 9603
+    },
+    {
+        "name": "WIFI_STRENGTH_CHANGE",
+        "value": 9604
+    },
+    {
+        "name": "WIFI_CONNECTED_DEVICES_CHANGE",
+        "value": 9605
+    },
+    {
+        "name": "WIFI_ERROR_CODES",
+        "value": 9799
+    },
+    {
+        "name": "BLUETOOTH_OPERATING_MODE_CHANGE",
+        "value": 9800
+    },
+    {
+        "name": "BLUETOOTH_STRENGTH_CHANGE",
+        "value": 9801
+    },
+    {
+        "name": "BLUETOOTH_CONNECTED_DEVICES_CHANGE",
+        "value": 9802
+    },
+    {
+        "name": "BLUETOOTH_ERROR_CODES",
+        "value": 9999
+    },
+    {
+        "name": "CELLULAR_OPERATING_MODE_CHANGE",
+        "value": 10000
+    },
+    {
+        "name": "CELLULAR_STRENGTH_CHANGE",
+        "value": 10001
+    },
+    {
+        "name": "CELLULAR_OPERATOR_CHANGE",
+        "value": 10002
+    },
+    {
+        "name": "CELLULAR_CELLUAR_STATUS_CHANGE",
+        "value": 10003
+    },
+    {
+        "name": "CELLULAR_ENABLED_STATE_CHANGE",
+        "value": 10004
+    },
+    {
+        "name": "CELLULAR_TCU_ID_CHANGE",
+        "value": 10005
+    },
+    {
+        "name": "CELLULAR_IMEI_1_CHANGE",
+        "value": 10006
+    },
+    {
+        "name": "CELLULAR_ICCID_1_CHANGE",
+        "value": 10007
+    },
+    {
+        "name": "CELLULAR_IMEI_2_CHANGE",
+        "value": 10008
+    },
+    {
+        "name": "CELLULAR_ICCID_2_CHANGE",
+        "value": 10009
+    },
+    {
+        "name": "CELLULAR_ERROR_CODES",
+        "value": 10199
+    },
+    {
+        "name": "LOCATION_OPERATING_MODE_CHANGE",
+        "value": 10200
+    },
+    {
+        "name": "LOCATION_GEO_LOC_CHANGE",
+        "value": 10201
+    },
+    {
+        "name": "LOCATION_ALTITUDE_CHANGE",
+        "value": 10202
+    },
+    {
+        "name": "LOCATION_VISIBLE_SATS_CHANGE",
+        "value": 10203
+    },
+    {
+        "name": "LOCATION_USER_OPTIN_CHANGE",
+        "value": 10204
+    },
+    {
+        "name": "LOCATION_ERROR_CODES",
+        "value": 10399
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_AC_CURRENT_METER_CHANGE",
+        "value": 10600
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_LOAD_SHEDDING_TRIGGER_CHANGE",
+        "value": 10601
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_ZONE_4_LOCAL_FLAG_CHANGE",
+        "value": 10602
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_ZONE_5_LOCAL_FLAG_CHANGE",
+        "value": 10603
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_SYSTEM_OVERLOAD_TRIGGER_CHANGE",
+        "value": 10604
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_AVC2_MODE_CHANGE",
+        "value": 10605
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_GENERATOR_STATE_CHANGE",
+        "value": 10606
+    },
+    {
+        "name": "ENERGY_MANAGEMENT_ERROR_CODES",
+        "value": 10799
+    },
+    {
+        "name": "PROPOWER_PRO_POWER_RELAY_CHANGE",
+        "value": 10800
+    },
+    {
+        "name": "PROPOWER_VOLTAGE_CHANGE",
+        "value": 10801
+    },
+    {
+        "name": "PROPOWER_CURRENT_CHANGE",
+        "value": 10802
+    },
+    {
+        "name": "PROPOWER_POWER_CHANGE",
+        "value": 10803
+    },
+    {
+        "name": "PROPOWER_ACTIVE_CHANGE",
+        "value": 10804
+    },
+    {
+        "name": "PROPOWER_ERROR_CODES",
+        "value": 10999
+    },
+    {
+        "name": "INVERTER_MODE_CHANGE",
+        "value": 11000
+    },
+    {
+        "name": "INVERTER_OUTPUT_CURRENT_CHANGE",
+        "value": 11001
+    },
+    {
+        "name": "INVERTER_STATUS_CHANGE",
+        "value": 11002
+    },
+    {
+        "name": "INVERTER_OUTPUT_VOLTAGE_CHANGE",
+        "value": 11003
+    },
+    {
+        "name": "INVERTER_CURRENT_CHANGE",
+        "value": 11004
+    },
+    {
+        "name": "INVERTER_FREQUENCY_CHANGE",
+        "value": 11005
+    },
+    {
+        "name": "INVERTER_OVERLOAD_CHANGE",
+        "value": 11006
+    },
+    {
+        "name": "INVERTER_LOAD_CHANGE",
+        "value": 11007
+    },
+    {
+        "name": "INVERTER_ERROR_CODES",
+        "value": 11199
+    },
+    {
+        "name": "BATTERY_TEMP_CHANGE",
+        "value": 11200
+    },
+    {
+        "name": "BATTERY_MODULE_COMMUNICATION_ERROR",
+        "value": 11398
+    },
+    {
+        "name": "BATTERY_ERROR_CODES",
+        "value": 11399
+    },
+    {
+        "name": "ENERGY_CONSUMER_WATTS_CHANGE",
+        "value": 11400
+    },
+    {
+        "name": "ENERGY_CONSUMER_CURRENT_CHANGE",
+        "value": 11401
+    },
+    {
+        "name": "ENERGY_CONSUMER_VOLTAGE_CHANGE",
+        "value": 11402
+    },
+    {
+        "name": "ENERGY_CONSUMER_ACTIVE_CHANGE",
+        "value": 11403
+    },
+    {
+        "name": "ENERGY_CONSUMER_SHED_CHANGE",
+        "value": 11404
+    },
+    {
+        "name": "ENERGY_CONSUMER_ERROR_CODES",
+        "value": 11599
+    },
+    {
+        "name": "ENERGY_SOURCE_MODE_CHANGE",
+        "value": 11800
+    },
+    {
+        "name": "ENERGY_SOURCE_ACTIVE_CHANGE",
+        "value": 11801
+    },
+    {
+        "name": "ENERGY_SOURCE_POWER_CHANGE",
+        "value": 11802
+    },
+    {
+        "name": "ENERGY_SOURCE_VOLTAGE_CHANGE",
+        "value": 11803
+    },
+    {
+        "name": "ENERGY_SOURCE_CURRENT_CHANGE",
+        "value": 11804
+    },
+    {
+        "name": "FUEL_TANK_LEVEL_CHANGE",
+        "value": 12000
+    },
+    {
+        "name": "FUEL_TANK_DISABLED_CHANGE",
+        "value": 12001
+    },
+    {
+        "name": "PET_MONITOR_MODE_CHANGE",
+        "value": 12200
+    },
+    {
+        "name": "PET_MONITOR_ENABLED_CHANGE",
+        "value": 12201
+    },
+    {
+        "name": "PET_MONITOR_TEMP_HIGH_SETTING_CHANGE",
+        "value": 12202
+    },
+    {
+        "name": "PET_MONITOR_TEMP_LOW_SETTING_CHANGE",
+        "value": 12203
+    },
+    {
+        "name": "PET_MONITOR_INTERIOR_TEMP_CHANGE",
+        "value": 12204
+    },
+    {
+        "name": "PET_MONITOR_BATTERY_LOW",
+        "value": 12205
+    },
+    {
+        "name": "PET_MONITOR_SHORE_DISCONECTED",
+        "value": 12206
+    },
+    {
+        "name": "PET_MONITOR_TEMP_HIGH",
+        "value": 12207
+    },
+    {
+        "name": "PET_MONITOR_TEMP_LOW",
+        "value": 12208
+    },
+    {
+        "name": "EVENT_NOT_DEFINED",
+        "value": 65535
+    },
+    {
+        "name": "WATERSYSTEMS_UNKNOWN_SYSTEM_ALERT",
+        "value": 50000
+    },
+    {
+        "name": "SYSTEM_MEMORY_LOW_ALERT",
+        "value": 50001
+    },
+    {
+        "name": "SYSTEM_CPU_LOAD_HIGH_ALERT",
+        "value": 50002
+    },
+    {
+        "name": "SYSTEM_STORAGE_LOW_ALERT",
+        "value": 50003
+    },
+    {
+        "name": "PETMINDER_HEAT_ALERT",
+        "value": 50004
+    },
+    {
+        "name": "PETMINDER_DISTRESS_ALERT",
+        "value": 50005
+    },
+    {
+        "name": "REFRIGERATOR_OUT_OF_RANGE",
+        "value": 50006
+    },
+    {
+        "name": "FRESH_WATER_TANK_EMPTY",
+        "value": 50007
+    },
+    {
+        "name": "FRESH_WATER_TANK_BELOW",
+        "value": 50008
+    },
+    {
+        "name": "FRESH_WATER_TANK_FULL",
+        "value": 50009
+    },
+    {
+        "name": "GREY_WATER_TANK_EMPTY",
+        "value": 50010
+    },
+    {
+        "name": "GREY_WATER_TANK_ABOVE",
+        "value": 50011
+    },
+    {
+        "name": "GREY_WATER_TANK_FULL",
+        "value": 50012
+    },
+    {
+        "name": "FRESH_WATER_PUMP_ONOFF",
+        "value": 50013
+    },
+    {
+        "name": "GREY_WATER_PUMP_ONOFF",
+        "value": 50014
+    },
+    {
+        "name": "BATTERY_CHARGE_FULL",
+        "value": 50015
+    },
+    {
+        "name": "BATTERY_CHARGE_LOW",
+        "value": 50016
+    },
+    {
+        "name": "BATTERY_CHARGE_LOW_CUTOFF",
+        "value": 50017
+    },
+    {
+        "name": "LOAD_SHEDDING_WATER_HEATER_LOCK",
+        "value": 50018
+    },
+    {
+        "name": "LOAD_SHEDDING_CLIMATE_ZONE_HEATER_LOCK",
+        "value": 50019
+    },
+    {
+        "name": "COACH_TEMP_LOW",
+        "value": 50020
+    },
+    {
+        "name": "COACH_TEMP_HIGH",
+        "value": 50021
+    },
+    {
+        "name": "INVERTER_TURNED_OFF",
+        "value": 50022
+    },
+    {
+        "name": "INVERTER_ERROR",
+        "value": 50023
+    },
+    {
+        "name": "SHORE_POWER_CONNECTED",
+        "value": 50024
+    },
+    {
+        "name": "SHORE_POWER_DISCONNECTED",
+        "value": 50025
+    },
+    {
+        "name": "WATER_HEATER_SHUT_OFF",
+        "value": 50026
+    },
+    {
+        "name": "SPACE_HEATER_SHUT_OFF",
+        "value": 50027
+    },
+    {
+        "name": "INVERTER_OVERLOADED",
+        "value": 50028
+    },
+    {
+        "name": "BMS_DISCONNECTIN_BATTERY",
+        "value": 50029
+    },
+    {
+        "name": "BATTERY_CHARGING_STARTED",
+        "value": 50030
+    },
+    {
+        "name": "BATTERY_CHARGING_STOPPED",
+        "value": 50031
+    },
+    {
+        "name": "RECEIVING_SOLAR_POWER",
+        "value": 50032
+    },
+    {
+        "name": "USER_NEEDS_TO_ACKNOWLEDGE_OTA_UPDATE",
+        "value": 50033
+    },
+    {
+        "name": "FRESH_WATER_TANK_NOTICE",
+        "value": 50034
+    },
+    {
+        "name": "GREY_WATER_TANK_NOTICE",
+        "value": 50035
+    },
+    {
+        "name": "FREEZER_OUT_OF_RANGE",
+        "value": 50036
+    },
+    {
+        "name": "PET_MONITOR_TEMP_HIGH_ALERT",
+        "value": 50037
+    },
+    {
+        "name": "PET_MONITOR_TEMP_LOW_ALERT",
+        "value": 50038
+    },
+    {
+        "name": "PET_MONITOR_BATTERY_LOW_ALERT",
+        "value": 50039
+    },
+    {
+        "name": "BLACK_WATER_TANK_EMPTY",
+        "value": 50040
+    },
+    {
+        "name": "BLACK_WATER_TANK_ABOVE",
+        "value": 50041
+    },
+    {
+        "name": "BLACK_WATER_TANK_FULL",
+        "value": 50042
+    },
+    {
+        "name": "BLACK_WATER_TANK_NOTICE",
+        "value": 50043
+    },
+    {
+        "name": "LOAD_SHEDDING_GENERIC_ALERT",
+        "value": 50044
+    },
+    {
+        "name": "LOAD_SHEDDING_CLIMATE_ZONE_AC_LOCK",
+        "value": 50045
+    },
+    {
+        "name": "LOAD_SHEDDING_MICROWAVE_SHED",
+        "value": 50046
+    },
+    {
+        "name": "LOAD_SHEDDING_COOKTOP_SHED",
+        "value": 50047
+    },
+    {
+        "name": "FRESH_WATER_TANK_SENSOR_OVERVOLTAGE_ALERT",
+        "value": 50048
+    },
+    {
+        "name": "GRAY_WATER_TANK_SENSOR_OVERVOLTAGE_ALERT",
+        "value": 50049
+    },
+    {
+        "name": "BLACK_WATER_TANK_SENSOR_OVERVOLTAGE_ALERT",
+        "value": 50050
+    },
+    {
+        "name": "FRESH_WATER_TANK_SENSOR_UNDERVOLTAGE_ALERT",
+        "value": 50051
+    },
+    {
+        "name": "GRAY_WATER_TANK_SENSOR_UNDERVOLTAGE_ALERT",
+        "value": 50052
+    },
+    {
+        "name": "BLACK_WATER_TANK_SENSOR_UNDERVOLTAGE_ALERT",
+        "value": 50053
+    },
+    {
+        "name": "WATER_HEATER_OPERATING_LIN_FAILURE_ALERT",
+        "value": 50054
+    },
+    {
+        "name": "WATER_HEATER_OPERATING_ERROR_FAILURE_ALERT",
+        "value": 50055
+    },
+    {
+        "name": "SERVICE_MODE_ACTIVE",
+        "value": 50056
+    },
+    {
+        "name": "GENERIC_CAN_ERROR_ALERT",
+        "value": 51000
+    },
+    {
+        "name": "RVC_COMPONENT_NOT_RESPONDING",
+        "value": 51001
+    },
+    {
+        "name": "WEATHER_ALERTS",
+        "value": 52000
+    },
+    {
+        "name": "AIR_QUALITY_ALERT",
+        "value": 52001
+    },
+    {
+        "name": "AVALANCHE_WARNING",
+        "value": 52002
+    },
+    {
+        "name": "AVALANCHE_WATCH",
+        "value": 52003
+    },
+    {
+        "name": "BLIZZARD_WARNING",
+        "value": 52004
+    },
+    {
+        "name": "BLIZZARD_WATCH",
+        "value": 52005
+    },
+    {
+        "name": "COASTAL_FLOOD_WARNING",
+        "value": 52006
+    },
+    {
+        "name": "DENSE_FOG_ADVISORY",
+        "value": 52007
+    },
+    {
+        "name": "EXCESSIVE_HEAT_WARNING",
+        "value": 52008
+    },
+    {
+        "name": "EXTREME_COLD_WARNING",
+        "value": 52009
+    },
+    {
+        "name": "EXTREME_FIRE_DANGER",
+        "value": 52010
+    },
+    {
+        "name": "EXTREME_WIND_WARNING",
+        "value": 52011
+    },
+    {
+        "name": "FIRE_WARNING",
+        "value": 52012
+    },
+    {
+        "name": "FLASH_FLOOD_WARNING",
+        "value": 52013
+    },
+    {
+        "name": "FLASH_FLOOD_WATCH",
+        "value": 52014
+    },
+    {
+        "name": "FLOOD_WARNING",
+        "value": 52015
+    },
+    {
+        "name": "FLOOD_WATCH",
+        "value": 52016
+    },
+    {
+        "name": "FREEZE_WARNING",
+        "value": 52017
+    },
+    {
+        "name": "FREEZING_RAIN_ADVISORY",
+        "value": 52018
+    },
+    {
+        "name": "HIGH_WIND_WARNING",
+        "value": 52019
+    },
+    {
+        "name": "HURRICANE_FORCE_WIND_WARNING",
+        "value": 52020
+    },
+    {
+        "name": "HURRICANE_FORCE_WIND_WATCH",
+        "value": 52021
+    },
+    {
+        "name": "HURRICANE_WARNING",
+        "value": 52022
+    },
+    {
+        "name": "HURRICANE_WATCH",
+        "value": 52023
+    },
+    {
+        "name": "SEVERE_THUNDERSTORM_WARNING",
+        "value": 52024
+    },
+    {
+        "name": "SEVERE_THUNDERSTORM_WATCH",
+        "value": 52025
+    },
+    {
+        "name": "STORM_WARNING",
+        "value": 52026
+    },
+    {
+        "name": "STORM_WATCH",
+        "value": 52027
+    },
+    {
+        "name": "TORNADO_WARNING",
+        "value": 52028
+    },
+    {
+        "name": "TORNADO_WATCH",
+        "value": 52029
+    },
+    {
+        "name": "TROPICAL_STORM_WARNING",
+        "value": 52030
+    },
+    {
+        "name": "TROPICAL_STORM_WATCH",
+        "value": 52031
+    },
+    {
+        "name": "WIND_ADVISORY",
+        "value": 52032
+    },
+    {
+        "name": "WINTER_STORM_WARNING",
+        "value": 52033
+    }
+]

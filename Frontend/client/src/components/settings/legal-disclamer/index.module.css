@@ -1,0 +1,107 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 72px 200px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--mode-bg-1);
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.closeBtn {
+  position: absolute;
+  top: 21px;
+  left: 33px;
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--text-main);
+  margin-top: 8px;
+}
+.subtitle {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--text-deemphasized);
+  margin-top: 8px;
+}
+.description {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--text-deemphasized);
+  margin-top: 16px;
+}
+.description span {
+  color: var(--mode-text);
+  font-weight: 600;
+}
+.btnContainer {
+  display: flex;
+  gap: 19px;
+  justify-content: flex-end;
+}
+.cancelBtn {
+  width: 280px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--mode-text);
+  border: 1px solid var(--mode-text);
+  background-color: var(--mode-text-inverse);
+}
+.rstBtn {
+  width: 366px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--mode-text-inverse);
+  border: 1px solid var(--mode-text-inverse);
+  background-color: var(--mode-text);
+}

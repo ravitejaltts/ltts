@@ -1,0 +1,19 @@
+parameters:
+  environmentObjects:
+    - environmentName: 'dev'
+      regionAbrvs: ['cus']
+  serviceName: ''
+  deviceType: 'common'
+  smartRvVersion: 'undefined'
+  modules : []
+
+stages:
+- stage: '${{ parameters.serviceName }}_build'
+  jobs:
+  - template: ../jobs/build_and_publish_winnconnect_app.yml
+    parameters:
+      workingDirectory: 'WinnConnect'
+      serviceName: ${{ parameters.serviceName }}
+      deviceType: ${{ parameters.deviceType}}
+      smartRvVersion: ${{ parameters.smartRvVersion }}
+      modules: ${{ parameters.modules}}

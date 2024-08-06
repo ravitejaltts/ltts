@@ -1,0 +1,84 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    padding:72px 88px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: var(--mode-text-inverse);
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+}
+.progress{
+    margin-top:24px;
+    width: 290px;
+    
+}
+progress::-webkit-progress-value { background: #4c85a9; }
+.title{
+    font-family: Roboto;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--mode-text);
+  margin-top:50px
+}
+
+.titleError{
+    font-family: Roboto;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--mode-text);
+  margin-top:30px
+}
+.description{
+    font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  text-align: center;
+  color: var(--text-deemphasized);
+  width: 50%;
+}
+.okayBtn{
+    width: 280px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  text-align: center;
+  color:var(--mode-text);
+ border: 1px solid var(--mode-text);
+ background-color: var(--mode-text-inverse);
+ margin-top:40px
+}

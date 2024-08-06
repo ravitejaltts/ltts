@@ -1,0 +1,100 @@
+trigger:
+  branches:
+    include:
+    - main
+
+parameters:
+- name: deviceType
+  displayName: device type
+  type: string
+  values:
+  - s500
+  - s800
+  - sbox
+  default: s500
+- name: publish
+  displayName: publish cohorts
+  type: boolean
+  default: false
+- name: cohorts
+  displayName: cohorts
+  type: string
+  default: alpha
+  values:
+  - alpha
+  - beta
+  - $default
+  - alpha,beta
+  - alpha,beta,$default
+
+##  Plan to toggle on variables based on criteria
+##  altering release or version based on branch when
+##  working on multi-environments
+
+variables:
+  - template: variables/smartrv_version_variables.yml
+  - name: isRelease
+    value: true
+  - name: version
+    ${{ if startsWith(variables['Build.SourceBranch'], 'refs/tags/v') }}:
+      value: $[ replace(variables['Build.SourceBranch'], 'refs/tags/v', '') ]
+    ${{ else }} :
+      value: $[format('{0}', variables['smartRvVersion'])]
+name: '$(version)'
+
+pool:
+  vmImage: 'windows-latest'
+
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: 'Owners App/templates'
+    ref: 'refs/heads/main'
+  - repository: frontend
+    type: git
+    name: 'SmartRV/Frontend'
+    ref: 'refs/heads/main'
+
+stages:
+- template: wgo-smart-rv-onboard-main-template.yml
+  parameters:
+    deviceType: ${{ parameters.deviceType }}
+    isRelease: ${{ variables.isRelease }}
+    publish: ${{ convertToJson(parameters.publish) }}
+    cohorts: ${{ parameters.cohorts }}
+    smartRvVersion: $(Build.BuildNumber)
+    modules:
+    - module: data
+      version: ${{ variables.dataModuleVersion }}
+      container: common
+    - module: hmi_tools
+      version: ${{ variables.hmiToolsModuleVersion }}
+      container: common
+    - module: common_libs
+      version: ${{ variables.commonLibsModuleVersion }}
+      container: common
+    - module: iot_service
+      version: ${{ variables.iotServiceModuleVersion }}
+      container: common
+    - module: system_service
+      version: ${{ variables.systemServiceModuleVersion }}
+      container: common
+    - module: main_service
+      version: ${{ variables.uiServiceModuleVersion }}
+      container: common
+    - module: kiosk_config
+      version: ${{ variables.kioskConfigModuleVersion }}
+      container: common
+    - module: can_service
+      version: ${{ variables.canServiceModuleVersion }}
+      container: common
+    - module: bt_service
+      version: ${{ variables.btServiceModuleVersion }}
+      container: common
+    - module: update_service
+      version: ${{ variables.updateServiceModuleVersion }}
+      container: common
+    - module: smartrv-frontend
+      version: ${{ variables.smartrvFrontendModuleVersion }}
+      container: common
