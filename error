@@ -1,1 +1,13 @@
+HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/toml/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
 
+  at ~/.local/lib/python3.10/site-packages/requests/adapters.py:698 in send
+      694│                 raise ProxyError(e, request=request)
+      695│ 
+      696│             if isinstance(e.reason, _SSLError):
+      697│                 # This branch is for urllib3 v1.22 and later.
+    → 698│                 raise SSLError(e, request=request)
+      699│ 
+      700│             raise ConnectionError(e, request=request)
+      701│ 
+      702│         except ClosedPoolError as e:
+raviteja@raviteja-Virtual-Machine:~/Downloads/ltts
