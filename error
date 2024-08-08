@@ -1,13 +1,1 @@
-HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/toml/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
-
-  at ~/.local/lib/python3.10/site-packages/requests/adapters.py:698 in send
-      694│                 raise ProxyError(e, request=request)
-      695│ 
-      696│             if isinstance(e.reason, _SSLError):
-      697│                 # This branch is for urllib3 v1.22 and later.
-    → 698│                 raise SSLError(e, request=request)
-      699│ 
-      700│             raise ConnectionError(e, request=request)
-      701│ 
-      702│         except ClosedPoolError as e:
-raviteja@raviteja-Virtual-Machine:~/Downloads/ltts
+[{"title":"Bluetooth","type":"SETTINGS_LIST_ITEM_NAV","value":"--","data":[{"title":"Bluetooth","data":[{"title":"BLUETOOTH PREFERENCES","type":"SETTINGS_SECTIONS_LIST_ITEM","data":[{"title":"Bluetooth","subtext":"Having trouble connecting? Try turning Bluetooth off and then back on. Then try reconnecting.","type":"SIMPLE_ONOFF","state":{"onOff":0},"actions":{"TOGGLE":{"type":"api_call","action":{"href":"/api/settings/bluetooth/onoff","type":"PUT","params":{"$onOff":"int","item":"BluetoothControlEnabled"}}}}},{"type":"SUPPORT_TEXT","text":"Having trouble connecting? Try turning Bluetooth off and then back on. Then try reconnecting."}]}]}]},{"title":"Cellular","type":"SETTINGS_LIST_ITEM_NAV","value":"Disconnected","data":[{"title":"Cellular","data":[{"title":"CELLULAR INFO / SUBSCRIPTION","type":"SETTINGS_SECTIONS_LIST_ITEM","data":[{"title":"Winnebago Connect Premium","type":"CELLULAR_INFO_LABEL","value":"Disconnected - LTE","state":{"strength":0,"network":"LTE"},"actions":{"DISPLAY":{"type":"api_call","action":{"href":"/api/connectivity/cellular","type":"GET"}}}}]}]}]}]
