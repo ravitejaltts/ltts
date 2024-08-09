@@ -117,7 +117,7 @@ settings_wifi = {
                             {
                                 
                                 'title': 'Known Networks',
-                                'value': '',
+                                'type': 'SETTINGS_LIST_ITEM_NAV',
                                 'name' : 'UiSettingsConnectivityKnownNetworks',
                                 'data': [
                                     {
