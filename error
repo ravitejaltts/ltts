@@ -1,27 +1,11 @@
-{
-                'type': 'MULTI_NAVIGATION_BUTTON',
-                'title': f'Software Version {running_version}',
-                'subtitle': f'Last Updated {running_update}',
-                'button':  {
-                    'title': "Check for Updates",
-                    'enable': no_update_avaliable,
-                    'type': 'api_call',
-                    'action': {
-                        'href': f'{BASE_URL}/api/system/otacheck',
-                        'type': 'GET'
-                    }
-                }
-            },
 
-
-{dat?.type === "MULTI_NAVIGATION_BUTTON" && (
-                <SettingRow2
-                  name={dat?.title}
-                  bottomText={dat?.subtitle}
-                  buttonData={dat?.button}
-                  noBorder={arr.length - 1 === ind}
-                  handleButtonClick={handleButtonClick}
-                />
-              )}
-
-import SettingRow2 from "../../../components/settings/setting-row-2/SettingRow2";
+  const handleButtonClick = (buttonData) => {
+    if (buttonData?.action?.href) {
+      axios.get(buttonData?.action?.href);
+    }
+    if (buttonData?.notes) {
+      setInfoData(buttonData?.notes);
+      setDisplayFullScreenPage(UPDATE_SCREEN_VALUES.ABOUT_UPDATE);
+    }
+    refreshDataImmediate();
+  };
