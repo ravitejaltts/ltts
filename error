@@ -1,1 +1,27 @@
-When Limit Data Usage is turned on, this network will pause automatic updates and background tasks, such as... . This may be helpful if this network is on a limited data plan.
+{
+                'type': 'MULTI_NAVIGATION_BUTTON',
+                'title': f'Software Version {running_version}',
+                'subtitle': f'Last Updated {running_update}',
+                'button':  {
+                    'title': "Check for Updates",
+                    'enable': no_update_avaliable,
+                    'type': 'api_call',
+                    'action': {
+                        'href': f'{BASE_URL}/api/system/otacheck',
+                        'type': 'GET'
+                    }
+                }
+            },
+
+
+{dat?.type === "MULTI_NAVIGATION_BUTTON" && (
+                <SettingRow2
+                  name={dat?.title}
+                  bottomText={dat?.subtitle}
+                  buttonData={dat?.button}
+                  noBorder={arr.length - 1 === ind}
+                  handleButtonClick={handleButtonClick}
+                />
+              )}
+
+import SettingRow2 from "../../../components/settings/setting-row-2/SettingRow2";
