@@ -1,25 +1,47 @@
-      <button className={styles.removeUser} onClick={toggleForgotNetwork}>
-        Reset Without Backup
-      </button>
-
-const toggleForgotNetwork = () => {
-    
-  };
-
-.removeUser {
-  width: 322px;
-  height: 40px;
-  display: flex;
-  border: none;
-  color: #ed0202;
-  background-color: white;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  font-size: 19px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.05;
-
-}
+import axios from "axios";
+import React from "react";
+import styles from "../../style/switch.module.css";
+ 
+const SimpleSwitch = (
+  {
+    onOff,
+    toggleAction,
+    extraPayload,
+    refreshDataImmediate,
+  }) => {
+  function handleChange(e) {
+    e.cancelBubble = true;
+    e.stopPropagation();
+    const state = Number(e.target.checked);
+    axios
+      .put(toggleAction.href, {
+        ...(toggleAction?.params?.item && {item: toggleAction?.params?.item}),
+        ...extraPayload,
+        onOff: state,
+      })
+      .then(() => {
+        if (refreshDataImmediate) {
+          refreshDataImmediate();
+        }
+      });
+  }
+ 
+  return (
+    <>
+      <div className={styles.switchContainer}>
+        <span className={styles.text}>
+          {onOff ? "On" : "Off"}
+        </span>
+        <input
+          simpleswitch=""
+          type="checkbox"
+          className={styles.switch}
+          checked={onOff}
+          onChange={handleChange}
+        />
+      </div>
+    </>
+  );
+};
+ 
+export default SimpleSwitch;
