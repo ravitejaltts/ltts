@@ -680,17 +680,23 @@ async def gui_settings(request: Request):
                             {
                                 'title': 'Frank’s Winnies',
                                 'type': 'SETTINGS_LIST_ITEM_NAV',
-                                'protected': 'true',  # Indicating secure network
+                                'protected': 'true',
+                                'wifi' :'true',
+                                'name' : 'UiSettingsConnectivityJoinNetwork'
                             },
                             {
                                 'title': 'HDS53400',
                                 'type': 'SETTINGS_LIST_ITEM_NAV',
                                 'protected': 'true',
+                                'wifi' :'true',
+                                'name' : 'UiSettingsConnectivityJoinNetwork'
                             },
                             {
                                 'title': 'Truckstop McDonalds',
                                 'type': 'SETTINGS_LIST_ITEM_NAV',
                                 'protected': 'false',
+                                'wifi' :'true',
+                                'name' : 'UiSettingsConnectivityJoinNetwork'
                             },
                             {
                                 'title': 'Known Networks',
