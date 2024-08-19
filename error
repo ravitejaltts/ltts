@@ -1,53 +1,5 @@
-    {
-                            'title': 'Frank’s Winnies',
-                            'type': 'TEXT_DISPLAY',
-                            'icon': 'lock',  # Indicating secure network
-                            'actions': {
-                                'CLICK': {
-                                    'type': 'api_call',
-                                    'action': {
-                                        'href': f'{BASE_URL}/api/settings/wifi/connect',
-                                        'type': 'POST',
-                                        'params': {
-                                            'network': 'Frank’s Winnies',
-                                            'password': 'string'  # Prompt user to enter password
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            'title': 'HDS53400',
-                            'type': 'TEXT_DISPLAY',
-                            'icon': 'lock',
-                            'actions': {
-                                'CLICK': {
-                                    'type': 'api_call',
-                                    'action': {
-                                        'href': f'{BASE_URL}/api/settings/wifi/connect',
-                                        'type': 'POST',
-                                        'params': {
-                                            'network': 'HDS53400',
-                                            'password': 'string'  # Prompt user to enter password
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            'title': 'Truckstop McDonalds',
-                            'type': 'TEXT_DISPLAY',
-                            'icon': 'none',  # Open network
-                            'actions': {
-                                'CLICK': {
-                                    'type': 'api_call',
-                                    'action': {
-                                        'href': f'{BASE_URL}/api/settings/wifi/connect',
-                                        'type': 'POST',
-                                        'params': {
-                                            'network': 'Truckstop McDonalds'
-                                        }
-                                    }
-                                }
-                            }
-                        },
+const networkData = data?.[0]?.tabs?.filter(
+        (tab) => `${tab.name}` === SETTINGS_LINKS.CONNECTIVITY
+    )[0].details?.[0]?.data?.[0]?.data?.[0]?.items?.[1]?.data?.[0]?.data[1]?.data;
+
+    const addNetworkData = networkData?.[networkData.length-1]?.data?.[0];
