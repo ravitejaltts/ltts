@@ -1,5 +1,7 @@
-const networkData = data?.[0]?.tabs?.filter(
-        (tab) => `${tab.name}` === SETTINGS_LINKS.CONNECTIVITY
-    )[0].details?.[0]?.data?.[0]?.data?.[0]?.items?.[1]?.data?.[0]?.data[1]?.data;
+const [selectedSecurityType, setSelectedSecurityType] = useState(null);
 
-    const addNetworkData = networkData?.[networkData.length-1]?.data?.[0];
+ setSelectedSecurityType(value);
+
+selected={selectedSecurityType === option.value}
+
+className={selectedSecurityType === option.value ? styles.selected : ''}
