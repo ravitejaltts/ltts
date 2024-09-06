@@ -1,9 +1,0 @@
-{
-    "defaults": {
-        "BluetoothControlEnabled": 1,
-        "VolumeUnitPreference": 0
-    },
-    "hal": {},
-    "settings": {},
-    "version": "0.1"
-}

@@ -1,2 +1,0 @@
-This module is just a shim for development/testing purposes.  The real library will be installed on the target as a part
-of the firmware.  This shim provides no encryption or protection of the data.  It just mimics libgozer's interface.
